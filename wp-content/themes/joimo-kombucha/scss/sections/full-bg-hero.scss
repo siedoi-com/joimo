@@ -1,0 +1,36 @@
+.full-bg-hero {
+    height: calc(100svh - 7rem);
+    position: relative;
+
+    &__bg-wr {
+        position: absolute;
+        @include push-full;
+    }
+
+    &__bg-img {
+        @include cover-image;
+    }
+
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding-block: 3rem;
+    }
+
+    &__content-wr {
+        max-width: 45.8rem;
+        color: var(--color_snow);
+    }
+
+    &__title {
+        margin-block-end: 2rem;
+    }
+
+    &__btn {
+        min-width: 24rem;
+        margin-block-start: 8rem;
+    }
+}
+// End inner
