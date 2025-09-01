@@ -267,6 +267,7 @@ function joimo_kombucha_scripts()
 	wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/all.css', false, '5.14.0', 'all');
 	wp_enqueue_style('joimo-fonts', get_template_directory_uri() . '/css/joimo-fonts.css', false, '1.0', 'all');
 	wp_enqueue_style('dashicons');
+	wp_enqueue_style( 'styles-combucha', get_template_directory_uri() . '/css/styles-combucha.css', array());
 
 	wp_enqueue_script('joimo-kombucha-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 	wp_enqueue_script('bootstrap-popper', get_template_directory_uri() . '/js/popper.min.js', array('jquery'), '1.16.1', true);
@@ -488,3 +489,20 @@ function businessbloomer_sort_shipping_methods( $rates, $package ) {
 // CUSTOM STYLE CSS FILE
 wp_enqueue_style( 'custom-style-v2', get_template_directory_uri() . '/css/custom-style-v2.css');
 
+// ACF in JSON
+function my_acf_json_save_point( $path ) {
+    // Your json path
+    $path = get_stylesheet_directory() . '/acf-json';
+    return $path;
+}
+add_filter( 'acf/settings/save_json', 'my_acf_json_save_point' );
+
+function my_acf_json_load_point( $paths ) {
+    // Remove default path
+    unset($paths[0]);
+
+    // Add your acf json path
+    $paths[] = get_stylesheet_directory() . '/acf-json';
+    return $paths;
+}
+add_filter( 'acf/settings/load_json', 'my_acf_json_load_point' );

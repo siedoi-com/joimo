@@ -1,0 +1,79 @@
+@import './mixins.scss';
+@import './fonts.scss';
+@import './vars.scss';
+
+// General
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font__general);
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color__white);
+    color: var(--color__black);
+    padding: 0;
+    margin: 0;
+}
+
+body.lock {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    scroll-behavior: smooth;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition--general);
+    color: inherit;
+    &::before, &::after {
+        transition: var(--transition--general);
+    }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+button {
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+.relative {
+    position: relative;
+}
+
+.responsive-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scroll-stoped {
+    overflow-y: hidden;
+}
+
+main {
+    position: relative;
+}
