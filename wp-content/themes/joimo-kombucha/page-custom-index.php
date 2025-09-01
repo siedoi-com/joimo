@@ -22,11 +22,9 @@ get_header("v2");
 		])
 	?>
 
-	<div id="top_hero_section" class="hero-box container-fluid"> <!-- Container for page title and hero -->		
-		
+	<div id="top_hero_section" class="hero-box container-fluid"> <!-- Container for page title and hero -->				
 		<!-- Alternate Block Section -->
 		<div class="hero-row skinny row alternate-block-section">
-			
 			<section class="headline-column col-md-6 col-12">
 			<div class="hero-inner">
 				<h2 class="headline-title">
@@ -46,44 +44,6 @@ get_header("v2");
 			
 		</div>
 		<!-- Alternate Block Section --> 	
-		
-		<!-- Alternate Block Section V2 -->
-		<div class="hero-row skinny row alternate-block-section-v2">
-
-			<section class="hero-column col-md-6 col-12">	            					
-				<img src="<?php the_field('block-image-v2'); ?>">
-			</section>
-			
-			<section class="headline-column col-md-6 col-12">
-				<div class="inner-desc">
-
-					<img src="<?php the_field('group_1_image_1'); ?>">
-
-					<h2 class="headline-title">
-					<?php the_field('group_1_title_1'); ?></h2>
-
-					<p><?php the_field('group_1_subtitle_1'); ?></p>
-				</div>
-				<div class="inner-desc">
-
-					<img src="<?php the_field('group_2_image_2'); ?>">
-
-					<h2 class="headline-title"><?php the_field('group_2_title_2'); ?></h2>
-
-					<p><?php the_field('group_2_subtitle_2'); ?></p>
-				</div>
-				<div class="inner-desc">
-
-					<img src="<?php the_field('group_3_image_3'); ?>">
-
-					<h2 class="headline-title"><?php the_field('group_3_title_3'); ?></h2>
-
-					<p><?php the_field('group_3_subtitle_3'); ?></p>
-				</div>	
-			</section>
-			
-		</div>
-		<!-- Alternate Block Section V2 -->
 		
 		<!-- Section Title -->
 		<div class="hero-row skinny row section-title-v2">
