@@ -19,7 +19,17 @@ get_header("v2");
 			'text' => get_field('full_background_hero')['text'],
 			'button_url' => get_field('full_background_hero')['button']['url'],
 			'button_title' => get_field('full_background_hero')['button']['title'],
-		])
+		]);
+
+		$product_slider_group = get_field('product_slider');
+		$product_slider_title = $product_slider_group['title'] ?? null;
+		$product_slider_all_link = $product_slider_group['view_all_link'] ?? null;
+		$product_slider_products = $product_slider_group['products_category'] ?? null;
+		get_template_part('sections/nt-big-product-slider', null, [
+			'title' => $product_slider_title,
+			'all_link' => $product_slider_all_link,
+			'products' => $product_slider_products
+		]);
 	?>
 
 	<div id="top_hero_section" class="hero-box container-fluid"> <!-- Container for page title and hero -->				

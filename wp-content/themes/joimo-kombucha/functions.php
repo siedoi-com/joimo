@@ -269,6 +269,8 @@ function joimo_kombucha_scripts()
 	wp_enqueue_style('dashicons');
 	if (is_front_page()) {
 		wp_enqueue_style( 'styles-home-combucha', get_template_directory_uri() . '/css/home-styles-combucha.css', array());
+		wp_enqueue_style( 'styles-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
+		wp_enqueue_script('script-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array('jquery'), _S_VERSION, true);
 	}
 
 	wp_enqueue_script('joimo-kombucha-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
