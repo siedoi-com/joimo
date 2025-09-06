@@ -1,5 +1,5 @@
 .full-bg-hero {
-    height: calc(100svh - 7rem);
+    height: calc(100svh - 20rem);
     position: relative;
 
     &__bg-wr {
@@ -34,3 +34,52 @@
     }
 }
 // End inner
+
+@include media-LXL {
+    .full-bg-hero {
+        height: auto;
+
+        &__container {
+            padding-block: 10rem;
+        }
+
+        &__title {
+            margin-block-end: 1.5rem;
+        }
+
+        &__content-wr {
+            max-width: 39rem;
+        }
+
+        &__btn {
+            margin-block-start: 6rem;
+        }
+    }
+    // End inner
+}
+// End LXL
+
+@include media-L {
+    .full-bg-hero {
+        &__container {
+            padding-block: 6rem;
+        }
+
+        &__title {
+            margin-block-end: 1rem;
+        }
+
+        &__content-wr {
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        &__btn {
+            margin-block-start: 4rem;
+            min-width: 21rem;
+        }
+    }
+    // End inner
+}
+// End L
