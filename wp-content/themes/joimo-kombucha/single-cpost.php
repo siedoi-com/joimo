@@ -3,7 +3,7 @@
  * The template for displaying all single posts
  *
  * Template Name: Custom Post Page
- * Template Post Type: post
+ * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package Joimo_Kombucha
@@ -55,9 +55,144 @@ get_header();
     <!-- Begin Custom Post single container -->
 
     <div class="custom_post_template custom_post_alternate_style_template">
+			<!-----START TITLE ---------->
+      <div class="title-container single-title-container container">
+        <section class="row">
+          <?php the_title( '<h2 class="entry-title col-md-12">', '</h2>' ); ?>
+          <div class="stories-pill"><a href="#">#Stories</a></div>
+        </section>
+      </div>
+      <!-----END TITLE ---------->
+      <div class="banner-tea-and-me">
+        <img src="https://joimotea.com/wp-content/uploads/2021/08/About-Tea-_Tea-scaled.jpg" alt="">
+      </div>
+      <!-----END top banner ---------->
+      
+      <div class="artical-custom-layout">
+        <div class="flex-row">
+        <div class="flex-box">
+          
+          <div class="left">
+            <div class="heading">
+              <h2>I learned how 
+                to re-love tea 
+                one sip at a time.</h2>
+            </div>
+          </div>
+          
+          <div class="right">
+            <div class="discription">
+              <div class="right-content">
+              <p>I spent my 20s and 30s rushing from one thing to another, whether it was rushing to work, rushing to sit in traffic on the 10 fwy, rushing to a tennis class, or rushing to dinner before the restaurant gave away our table — it was always a rush. Then not by choice, life slowed down ... like my own practice pandemic before the world’s pandemic. As the pace of life slowed, I learned to love things that I missed in the rush of life.</p>
+              <p>One of the things that I learned to love again is tea: I started to appreciate the amazing tastes of Taiwanese oolong — again — that reminded me of my childhood.</p>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+          
+          <div class="second-block">
+            <div class="left">
+              <div class="img-figure">
+                <img src="https://joimotea.com/wp-content/uploads/2021/08/IMAGE_02.jpg" alt="">
+              </div>
+            </div>
+            
+            <div class="right">
+              <div class="right-text-with-img">
+                <div class="right-content">
+                <p>My first memories of tea is also a memory that I was a thief. My grandfather would have his own tea ceremony every afternoon at the dining table using a small teapot and pouring it into a small little cup ... I remember several occasions where I run by and “steal” the cup without permission or invitation; he never stopped me from stealing his tea, he would just warn me that it was hot and I needed to be careful. </p>
+                </div>
 
-    
-
+              </div>
+              
+              <div class="img-figure">
+             	<img src="https://joimotea.com/wp-content/uploads/2021/08/image_3.jpg" alt="">
+             </div>
+              
+              
+            </div>
+            
+            <div class="left">
+              
+              <div class="right-text-with-img">
+                <div class="left-content">
+                <p>I remember my fascination for the tiny little cups that were the perfect size for my small chubby hands and they were the perfect size to share with my dolls. By the time I walked back to my play area, there was hardly any tea left and I remember seeing him wiping up the floor behind me and grumbling... I rarely drank tea at that age, but I remember its distinct scent. Over time, he set up my tea party at the dining table because he didn’t want to sit in my kid chair and his tea ceremony and became my tea party. That was my introduction to exquisite tea. </p>
+                </div>
+              </div>
+            
+            </div>
+            
+            
+            
+          </div>
+          <!---  end second Block ---->
+        
+          <div style="clear:both"></div>
+          <!---  Third Block ---->
+          <div class="third-block">
+            <div class="left-column left">
+            	<div class="img-figure">
+             	<img src="https://joimotea.com/wp-content/uploads/2021/08/The_farm_Image_4.jpg" alt="">
+             </div>
+            </div>
+            <div class="right-column right">
+              <div class="vt-content">
+                <div class="text right-content">
+                  <p>Now if we talk about quality high mountain Taiwanese oolong teas, you’ll hear me refer to it as “Grandpa Tea”: you know, it’s the good stuff grandpas drink.</p>
+                  <p>As I grew the tea parties with Grandpa Tea grew less frequent and was eventually replaced with a coffee thing, then a smoothie thing, a boba milk tea thing, wine thing, and with all the rushing everywhere it all blurred together.</p>
+                </div>
+                
+                <h2>“... and it brought me back to having a tea party with my Grandpa again!”</h2>
+                
+                
+              </div>
+            </div>
+          </div>
+            <!---  END Third Block ---->
+          
+          <div class="forth-block">
+            <div class="left xs-block-1">
+            		 <div class="left-content">
+                <p>Fortuitously, at the same time my life slowed down, my Joimo partner, Allan, casually shared his Grandpa’s tea with me one day ... and it brought me back to having a tea party with my Grandpa again! I love it and it brings such fond memories and I just relish in the quiet of drinking hot tea by myself now. </p>
+                </div>
+            </div>
+            
+            <div class="right xs-block-2">
+              <div class="img-figure">
+                <img src="https://joimotea.com/wp-content/uploads/2021/08/IMAGE_05.jpg" alt="">
+              </div>
+            </div> 
+            
+             <div class="left xs-block-3">
+               <div class="img-figure">
+                 <img src="https://joimotea.com/wp-content/uploads/2021/08/images_6.jpg" alt="">
+               </div>
+            </div>
+            
+            
+            <div class="right xs-block-4">
+              <div class="right-content">
+                <p>The calmness and the memories that each cup brings makes me more in love with tea. Now I have hot tea I love drinking slowly and ice tea that I grab and go when I must rush. </p>
+              </div>
+            </div>
+            
+            
+          </div>
+          
+          
+        </div>
+        <div style="clear:both"></div>
+      </div>
+      
+      <div class="heading-block-bottom">
+        <h2>We wanted to share with you 
+our Grandpa Teas and hope 
+that you relish them 
+as much as we do.</h2>
+      </div>
+      
     </div>
 
     <!-- End custom post single container -->
