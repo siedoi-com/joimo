@@ -1,0 +1,14 @@
+.new-container {
+    &:not(.new-container--sm) {
+        margin-inline: auto;
+        width: 94.4vw;
+        max-width: 136rem;
+    }
+    
+    &--sm {
+        margin-inline: auto;
+        width: 81.32vw;
+        max-width: 117.1rem;
+    }
+}
+// End inner

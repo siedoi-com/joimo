@@ -1,3 +1,4 @@
+name: joimo_project
 services:
   db:
     image: mariadb:10.6

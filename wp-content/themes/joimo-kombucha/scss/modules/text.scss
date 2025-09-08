@@ -1,0 +1,46 @@
+.text {
+    &--h1 {
+        font-size: 8rem;
+        font-weight: 400;
+        line-height: 1;
+    }
+    // End H1
+
+    &--h2 {
+        font-size: 4.8rem;
+    }
+    // End h2
+
+    &--p {
+        font-size: 1.8rem;
+    }
+    // End P
+}
+// End inner
+
+@include media-LXL {
+    .text {
+        &--h1 {
+            font-size: 6rem;
+        }
+        // End H1
+
+        &--p {
+            font-size: 1.6rem;
+        }
+        // End P
+    }
+    // End inner
+}
+// End L
+
+@include media-M {
+    .text {
+        &--h1 {
+            font-size: 5rem;
+        }
+        // End H1
+    }
+    // End inner
+}
+// End M
