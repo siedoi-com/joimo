@@ -25,10 +25,26 @@
         }
         // End H1
 
+        &--h2 {
+            font-size: 3.6rem;
+        }
+        // End h2
+
         &--p {
             font-size: 1.6rem;
         }
         // End P
+    }
+    // End inner
+}
+// End LXL
+
+@include media-L {
+    .text {
+        &--h2 {
+            font-size: 3.2rem;
+        }
+        // End h2
     }
     // End inner
 }
@@ -40,6 +56,11 @@
             font-size: 5rem;
         }
         // End H1
+
+        &--h2 {
+            font-size: 2.8rem;
+        }
+        // End h2
     }
     // End inner
 }

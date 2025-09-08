@@ -1,0 +1,38 @@
+.nt-product-badge {
+    white-space: nowrap;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+// End inner
+
+.nt-product-badge--theme {
+    &_green {
+        background: #ECF3D4;
+        color: var(--color_leaf);
+    }
+    // End green
+}
+// End by THEME
+
+.nt-product-badge--size {
+    &_def {
+        padding: .6rem 1.4rem;
+        font-size: 1.4rem;
+        border-radius: 3rem;
+    }
+    // End DEF
+}
+// End by SIZE
+
+@include media-M {
+    .nt-product-badge--size {
+        &_def {
+            padding: .4rem 1.2rem;
+            font-size: 1.2rem;
+            border-radius: 2.4rem;
+        }
+        // End DEF
+    }
+    // End by SIZE
+}
+// End M

@@ -29,7 +29,7 @@
                 <!-- /.nt-section-heading__title -->
                 <?php if ($all_link): ?>
                     <div class="nt-section-heading__view-all-wr">
-                        <a href="<?= $all_link['url'] ?>" class="link link--type_def link--theme_dark"<?php if($all_link['target']): ?> target="<?= $all_link['target'] ?>"<?php endif ?>><?= $all_link['title'] ?></a>
+                        <a href="<?= $all_link['url'] ?>" class="nt-link nt-link--type_def nt-link--theme_dark"<?php if($all_link['target']): ?> target="<?= $all_link['target'] ?>"<?php endif ?>><?= $all_link['title'] ?></a>
                     </div>
                     <!-- /.nt-section-heading__view-all-wr -->
                 <?php endif ?>
@@ -40,37 +40,32 @@
         <?php if ($products_query->have_posts()): ?>
             <div class="nt-big-product-slider__slider-wr">
                 <div class="nt-big-product-slider__slider splide" role="group" aria-label="Product slider">
-                    <div class="splide__track">
+                    <div class="nt-big-product-slider__track splide__track">
                         <ul class="splide__list">
                             <?php
                                 while ($products_query->have_posts()):
                                     $products_query->the_post();
                                     $product_id = get_the_ID();
-
-                                    $regular_price = null;
-                                    $product = wc_get_product( $product_id );
                             ?>
                                 <li class="splide__slide">
-                                    <a href="<?= get_the_permalink() ?>" class="nt-big-product">
-                                        <div class="nt-big-product__img-wr">
-                                            <picture>
-                                                <img src="<?= get_the_post_thumbnail_url($product_id, 'full') ?>" alt="<?= get_the_title() ?>" class="nt-big-product__img" loading="lazy">
-                                            </picture>
-                                        </div>
-                                        <!-- /.nt-big-product__img-wr -->
-
-                                        <div class="nt-big-product__content-wr">
-                                            <h4 class="nt-big-product__title"><?= get_the_title() ?></h4>
-                                            <div class="nt-big-product__desc"><?= the_excerpt(); ?></div>
-                                            <div class="nt-big-product__price price price--size_def price--type_regular"><?= $product->get_price() ?></div>
-                                        </div>
-                                        <!-- /.nt-big-product__content-wr -->
-                                    </a>
-                                    <!-- /.nt-big-product -->
+                                    <?php get_template_part('blocks/big-product', null, [
+                                        'product_id' => $product_id
+                                    ]) ?>
                                 </li>
                             <?php endwhile ?>
                         </ul>
                     </div>
+
+                    <button class="nt-big-product-slider__arrow nt-big-product-slider__arrow--prev">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.33073 25L41.6641 25M8.33073 25L20.8307 37.5M8.33073 25L20.8307 12.5" stroke="#A7988F" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="nt-big-product-slider__arrow nt-big-product-slider__arrow--next">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M41.6693 25L8.33594 25M41.6693 25L29.1693 37.5M41.6693 25L29.1693 12.5" stroke="#A7988F" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
             <!-- /.nt-big-product-slider__slider-wr -->
