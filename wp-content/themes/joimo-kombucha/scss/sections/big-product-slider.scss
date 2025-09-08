@@ -5,5 +5,51 @@
     &__hading {
         margin-block-end: 4rem;
     }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__arrow {
+        position: absolute;
+        @include push--middle;
+        @include square(5rem);
+        padding: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            path {
+                transition: var(--transition);
+            }
+        }
+
+        &--prev {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
+        }
+
+        &:disabled {
+            opacity: .3;
+            cursor: default;
+        }
+
+        &:not(:disabled):hover {
+            outline: none;
+            
+            svg {
+                path {
+                    stroke: var(--color_leaf);
+                }
+            }
+        }
+    }
 }
 // End inner
