@@ -4458,6 +4458,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
         pagination: false,
         arrows: false,
         gap: '4.6rem',
+        breakpoints: {
+          960: {
+              perPage: 2,
+              gap: '2.4rem',
+          },
+          640: {
+            perPage: 1,
+          }
+        }
       });
 
       // Custom buttons

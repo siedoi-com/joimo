@@ -40,7 +40,7 @@
         <?php if ($products_query->have_posts()): ?>
             <div class="nt-big-product-slider__slider-wr">
                 <div class="nt-big-product-slider__slider splide" role="group" aria-label="Product slider">
-                    <div class="splide__track">
+                    <div class="nt-big-product-slider__track splide__track">
                         <ul class="splide__list">
                             <?php
                                 while ($products_query->have_posts()):

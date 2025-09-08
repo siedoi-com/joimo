@@ -49,7 +49,7 @@
     }
 
     &__desc {
-        margin-block: .5rem;
+        margin-block-start: .5rem;
         margin-inline: auto;
         max-width: 22rem;
         font-size: 1.4rem;
@@ -77,3 +77,23 @@
     // End hover
 }
 // End inner
+
+@include media-M {
+    .nt-big-product {
+        &__badge {
+            top: 1rem;
+            left: 1rem;
+        }
+
+        &__title {
+            font-size: 1.8rem;
+        }
+
+        &__price {
+            margin-block-start: .5rem;
+            font-size: 1.6rem;
+        }
+    }
+    // End inner
+}
+// End M

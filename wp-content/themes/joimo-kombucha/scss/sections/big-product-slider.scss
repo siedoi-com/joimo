@@ -41,9 +41,11 @@
             cursor: default;
         }
 
-        &:not(:disabled):hover {
+        &:hover, &:active, &:focus {
             outline: none;
-            
+        }
+
+        &:not(:disabled):hover {            
             svg {
                 path {
                     stroke: var(--color_leaf);
@@ -51,5 +53,41 @@
             }
         }
     }
+}
+// End inner
+
+@include media-L {
+    .nt-big-product-slider {
+        padding-block: 4rem;
+    }
+    // End inner
+}
+// End L
+
+@include media-M {
+    .nt-big-product-slider {
+        overflow: hidden;
+
+        &__hading {
+            margin-block-end: 3rem;
+        }
+
+        &__slider-wr {
+            width: 65vw;
+        }
+
+        &__arrow--next {
+            right: -30vw;
+        }
+
+        &__track {
+            overflow: visible;
+        }
+
+        &__arrow {
+            @include square(3.5rem);
+        }
+    }
+    // End inner
 }
 // End inner

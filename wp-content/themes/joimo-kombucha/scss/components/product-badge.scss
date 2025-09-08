@@ -23,3 +23,16 @@
     // End DEF
 }
 // End by SIZE
+
+@include media-M {
+    .nt-product-badge--size {
+        &_def {
+            padding: .4rem 1.2rem;
+            font-size: 1.2rem;
+            border-radius: 2.4rem;
+        }
+        // End DEF
+    }
+    // End by SIZE
+}
+// End M
