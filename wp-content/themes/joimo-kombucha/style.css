@@ -906,7 +906,7 @@ textarea {
 	margin-right: auto !important;
 }
 
-.page-id-482 {
+/* .page-id-482 {
 	background-image: url(images/Brew_Insructions9.jpg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
@@ -929,7 +929,7 @@ textarea {
 	background-image: url(images/Teaware_Hero_CROPPED.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-}
+} */
 
 .page-id-45 {
 	padding-top: 90px !important;
@@ -939,7 +939,7 @@ textarea {
 	color: #fff;
 }
 
-.page-id-76 .hero-container {
+/* .page-id-76 .hero-container {
 	background-image: url(images/FAQ_Hero.jpg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
@@ -955,7 +955,7 @@ textarea {
 	background-image: url(images/Our_Tea_Hero.jpg);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
-}
+} */
 
 .hero-column p {
 	margin-bottom: 0;
@@ -1924,3 +1924,19 @@ input#pwgc-redeem-button {
 		margin-right: auto;
 	}
 }
+
+.single-product > .woocommerce-Reviews-Section > #review_form_wrapper > .comment-form > .form-submit .submit{
+color: #221E1F!important;
+}
+
+.woocommerce div.product form.cart div.quantity::before {
+	display: block;
+	content: 'Quantity';
+	position: absolute;
+	top: -31px;
+	left: 0;
+	font-size: 14px;
+	font-family: 'cera_proregular'!important;
+	color: #7C7C7C;
+	font-weight: normal;
+  }
