@@ -1,0 +1,27 @@
+.btn {
+    outline: none;
+    cursor: pointer;
+    border-radius: 2.95rem;
+    padding: 2rem 2.29rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+// End inner
+
+.btn--theme {
+    &_leaf {
+        $color-leaf: #2A4934;
+
+        background: var(--color_leaf);
+        color: var(--color_snow) !important;
+
+        &:hover {
+            color: var(--color_snow) !important;
+            background: darken($color-leaf, 3%);
+        }
+    }
+    // End LEAF
+}
+// End THEME

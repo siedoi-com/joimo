@@ -11,6 +11,16 @@
 
 get_header("v2");
 ?>
+	<?php
+		get_template_part('sections/full-bg-hero', null, [
+			'image_url' => get_field('full_background_hero')['background_image']['url'],
+			'image_alt' => get_field('full_background_hero')['background_image']['alt'],
+			'title' => get_field('full_background_hero')['title'],
+			'text' => get_field('full_background_hero')['text'],
+			'button_url' => get_field('full_background_hero')['button']['url'],
+			'button_title' => get_field('full_background_hero')['button']['title'],
+		])
+	?>
 
 	<div id="top_hero_section" class="hero-box container-fluid"> <!-- Container for page title and hero -->		
 		
