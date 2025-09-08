@@ -1,0 +1,778 @@
+0000.057 (R) [notice] Looking for db archive: file name: backup_2025-09-01-1015_Joimo_Tea_60db5b222a8b-db.gz
+0000.060 (R) [notice] Archive is expected to be size: 4291.7 KB: OK
+0000.093 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.102 (R) [notice] Unpacking backup... (backup_2025-09-01-1015_Joimo_Tea_60db5b222a8b-db.gz, 4.2 Mb)
+0000.138 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.214 (R) [notice] Enabling Maintenance mode&#8230;
+0000.250 (R) [notice] Backup of: https://stg-joimoteacom-staging.kinsta.cloud
+0000.292 (R) [notice] Content URL: https://stg-joimoteacom-staging.kinsta.cloud/wp-content
+0000.293 (R) [notice] Uploads URL: https://stg-joimoteacom-staging.kinsta.cloud/wp-content/uploads
+0000.295 (R) [notice] Old table prefix: joik_
+0000.296 (R) [notice] Old ABSPATH: /www/joimoteacom_551/public/
+0000.298 (R) [notice] UpdraftPlus plugin slug: updraftplus/updraftplus.php
+0000.299 (R) [notice] Site information: multisite = 0
+0000.300 (R) [notice] Site information: sql_mode = ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+0000.301 (R) [notice] Site information: WooCommerce = 10.0.4
+0000.305 (R) [notice] New table prefix: nx_
+0000.320 (R) [notice] Processing table (InnoDB):  joik_options - will restore as: nx_options
+0000.642 (R) [notice] Atomic restore: dropping original table (wp_options)
+0000.650 (R) [notice] Atomic restore: renaming new table (nx_options) to final table name (wp_options)
+0001.080 (R) [notice] Table prefix has changed: changing option table field(s) accordingly: OK
+0001.090 (R) [notice] Search and replacing table: wp_options: rows: 1839
+0001.350 (R) [notice] Processing table (InnoDB):  joik_users - will restore as: nx_users
+0001.391 (R) [notice] Atomic restore: dropping original table (wp_users)
+0001.399 (R) [notice] Atomic restore: renaming new table (nx_users) to final table name (wp_users)
+0001.409 (R) [notice] Search and replacing table: wp_users: rows: 69
+0001.415 (R) [notice] Processing table (InnoDB):  joik_usermeta - will restore as: nx_usermeta
+0001.598 (R) [notice] Atomic restore: dropping original table (wp_usermeta)
+0001.607 (R) [notice] Atomic restore: renaming new table (nx_usermeta) to final table name (wp_usermeta)
+0001.624 (R) [notice] Table prefix has changed: changing usermeta table field(s) accordingly: OK
+0001.627 (R) [notice] Search and replacing table: wp_usermeta: rows: 2232
+0001.709 (R) [notice] Processing table (InnoDB):  joik_actionscheduler_actions - will restore as: nx_actionscheduler_actions
+0002.159 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_actions)
+0002.166 (R) [notice] Atomic restore: renaming new table (nx_actionscheduler_actions) to final table name (wp_actionscheduler_actions)
+0002.181 (R) [notice] Search and replacing table: wp_actionscheduler_actions: rows: 2410
+0002.310 (R) [notice] Processing table (InnoDB):  joik_actionscheduler_claims - will restore as: nx_actionscheduler_claims
+0002.335 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_claims)
+0002.341 (R) [notice] Atomic restore: renaming new table (nx_actionscheduler_claims) to final table name (wp_actionscheduler_claims)
+0002.351 (R) [notice] Search and replacing table: wp_actionscheduler_claims: rows: 0
+0002.352 (R) [notice] Processing table (InnoDB):  joik_actionscheduler_groups - will restore as: nx_actionscheduler_groups
+0002.377 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_groups)
+0002.385 (R) [notice] Atomic restore: renaming new table (nx_actionscheduler_groups) to final table name (wp_actionscheduler_groups)
+0002.395 (R) [notice] Search and replacing table: wp_actionscheduler_groups: rows: 14
+0002.397 (R) [notice] Processing table (InnoDB):  joik_actionscheduler_logs - will restore as: nx_actionscheduler_logs
+0002.736 (R) [notice] Atomic restore: dropping original table (wp_actionscheduler_logs)
+0002.742 (R) [notice] Atomic restore: renaming new table (nx_actionscheduler_logs) to final table name (wp_actionscheduler_logs)
+0002.752 (R) [notice] Search and replacing table: wp_actionscheduler_logs: rows: 7212
+0002.866 (R) [notice] Searching and replacing reached row: 5000
+0002.916 (R) [notice] Processing table (InnoDB):  joik_commentmeta - will restore as: nx_commentmeta
+0002.946 (R) [notice] Atomic restore: dropping original table (wp_commentmeta)
+0002.951 (R) [notice] Atomic restore: renaming new table (nx_commentmeta) to final table name (wp_commentmeta)
+0002.961 (R) [notice] Search and replacing table: wp_commentmeta: rows: 136
+0003.011 (R) [notice] Processing table (InnoDB):  joik_comments - will restore as: nx_comments
+0003.197 (R) [notice] Atomic restore: dropping original table (wp_comments)
+0003.204 (R) [notice] Atomic restore: renaming new table (nx_comments) to final table name (wp_comments)
+0003.217 (R) [notice] Search and replacing table: wp_comments: rows: 1254
+0003.275 (R) [notice] Processing table (InnoDB):  joik_links - will restore as: nx_links
+0003.297 (R) [notice] Atomic restore: dropping original table (wp_links)
+0003.303 (R) [notice] Atomic restore: renaming new table (nx_links) to final table name (wp_links)
+0003.312 (R) [notice] Search and replacing table: wp_links: rows: 0
+0003.314 (R) [notice] Processing table (InnoDB):  joik_postmeta - will restore as: nx_postmeta
+0003.564 (R) [notice] Database queries processed: 50 in 3.42 seconds
+0005.703 (R) [notice] Atomic restore: dropping original table (wp_postmeta)
+0005.711 (R) [notice] Atomic restore: renaming new table (nx_postmeta) to final table name (wp_postmeta)
+0005.784 (R) [notice] Search and replacing table: wp_postmeta: rows: 1023
+0006.717 (R) [notice] Processing table (InnoDB):  joik_posts - will restore as: nx_posts
+0007.178 (R) [notice] Atomic restore: dropping original table (wp_posts)
+0007.190 (R) [notice] Atomic restore: renaming new table (nx_posts) to final table name (wp_posts)
+0007.205 (R) [notice] Search and replacing table: wp_posts: rows: 2160
+0007.954 (R) [notice] Processing table (InnoDB):  joik_term_relationships - will restore as: nx_term_relationships
+0007.990 (R) [notice] Atomic restore: dropping original table (wp_term_relationships)
+0007.998 (R) [notice] Atomic restore: renaming new table (nx_term_relationships) to final table name (wp_term_relationships)
+0008.004 (R) [notice] Skipping this table: data in this table (wp_term_relationships) should not be search/replaced
+0008.005 (R) [notice] Processing table (InnoDB):  joik_term_taxonomy - will restore as: nx_term_taxonomy
+0008.031 (R) [notice] Atomic restore: dropping original table (wp_term_taxonomy)
+0008.037 (R) [notice] Atomic restore: renaming new table (nx_term_taxonomy) to final table name (wp_term_taxonomy)
+0008.047 (R) [notice] Search and replacing table: wp_term_taxonomy: rows: 144
+0008.055 (R) [notice] Processing table (InnoDB):  joik_termmeta - will restore as: nx_termmeta
+0008.097 (R) [notice] Atomic restore: dropping original table (wp_termmeta)
+0008.106 (R) [notice] Atomic restore: renaming new table (nx_termmeta) to final table name (wp_termmeta)
+0008.114 (R) [notice] Search and replacing table: wp_termmeta: rows: 417
+0008.125 (R) [notice] Processing table (InnoDB):  joik_terms - will restore as: nx_terms
+0008.156 (R) [notice] Atomic restore: dropping original table (wp_terms)
+0008.162 (R) [notice] Atomic restore: renaming new table (nx_terms) to final table name (wp_terms)
+0008.171 (R) [notice] Search and replacing table: wp_terms: rows: 144
+0008.176 (R) [notice] Processing table (InnoDB):  joik_wc_category_lookup - will restore as: nx_wc_category_lookup
+0008.211 (R) [notice] Atomic restore: dropping original table (wp_wc_category_lookup)
+0008.219 (R) [notice] Atomic restore: renaming new table (nx_wc_category_lookup) to final table name (wp_wc_category_lookup)
+0008.232 (R) [notice] Search and replacing table: wp_wc_category_lookup: rows: 19
+0008.235 (R) [notice] Processing table (InnoDB):  joik_wc_product_meta_lookup - will restore as: nx_wc_product_meta_lookup
+0008.296 (R) [notice] Atomic restore: dropping original table (wp_wc_product_meta_lookup)
+0008.300 (R) [notice] Atomic restore: renaming new table (nx_wc_product_meta_lookup) to final table name (wp_wc_product_meta_lookup)
+0008.309 (R) [notice] Search and replacing table: wp_wc_product_meta_lookup: rows: 126
+0008.316 (R) [notice] Processing table (InnoDB):  joik_wc_reserved_stock - will restore as: nx_wc_reserved_stock
+0008.343 (R) [notice] Atomic restore: dropping original table (wp_wc_reserved_stock)
+0008.349 (R) [notice] Atomic restore: renaming new table (nx_wc_reserved_stock) to final table name (wp_wc_reserved_stock)
+0008.357 (R) [notice] Search and replacing table: wp_wc_reserved_stock: rows: 8
+0008.360 (R) [notice] Processing table (InnoDB):  joik_wc_tax_rate_classes - will restore as: nx_wc_tax_rate_classes
+0008.381 (R) [notice] Database queries processed: 100 in 8.23 seconds
+0008.383 (R) [notice] Atomic restore: dropping original table (wp_wc_tax_rate_classes)
+0008.389 (R) [notice] Atomic restore: renaming new table (nx_wc_tax_rate_classes) to final table name (wp_wc_tax_rate_classes)
+0008.397 (R) [notice] Search and replacing table: wp_wc_tax_rate_classes: rows: 2
+0008.400 (R) [notice] Processing table (InnoDB):  joik_woocommerce_order_itemmeta - will restore as: nx_woocommerce_order_itemmeta
+0008.524 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_order_itemmeta)
+0008.529 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_order_itemmeta) to final table name (wp_woocommerce_order_itemmeta)
+0008.539 (R) [notice] Search and replacing table: wp_woocommerce_order_itemmeta: rows: 2539
+0008.585 (R) [notice] Processing table (InnoDB):  joik_woocommerce_payment_tokenmeta - will restore as: nx_woocommerce_payment_tokenmeta
+0008.614 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_payment_tokenmeta)
+0008.621 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_payment_tokenmeta) to final table name (wp_woocommerce_payment_tokenmeta)
+0008.635 (R) [notice] Search and replacing table: wp_woocommerce_payment_tokenmeta: rows: 0
+0008.636 (R) [notice] Processing table (InnoDB):  joik_alm - will restore as: nx_alm
+0008.657 (R) [notice] Atomic restore: dropping original table (wp_alm)
+0008.663 (R) [notice] Atomic restore: renaming new table (nx_alm) to final table name (wp_alm)
+0008.673 (R) [notice] Search and replacing table: wp_alm: rows: 1
+0008.675 (R) [notice] Processing table (InnoDB):  joik_automatewoo_abandoned_carts - will restore as: nx_automatewoo_abandoned_carts
+0008.713 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_abandoned_carts)
+0008.738 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_abandoned_carts) to final table name (wp_automatewoo_abandoned_carts)
+0008.752 (R) [notice] Search and replacing table: wp_automatewoo_abandoned_carts: rows: 3
+0008.761 (R) [notice] Processing table (InnoDB):  joik_automatewoo_customer_meta - will restore as: nx_automatewoo_customer_meta
+0008.795 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_customer_meta)
+0008.806 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_customer_meta) to final table name (wp_automatewoo_customer_meta)
+0008.815 (R) [notice] Search and replacing table: wp_automatewoo_customer_meta: rows: 0
+0008.817 (R) [notice] Processing table (InnoDB):  joik_automatewoo_customers - will restore as: nx_automatewoo_customers
+0008.856 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_customers)
+0008.860 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_customers) to final table name (wp_automatewoo_customers)
+0008.874 (R) [notice] Search and replacing table: wp_automatewoo_customers: rows: 6
+0008.876 (R) [notice] Processing table (InnoDB):  joik_automatewoo_events - will restore as: nx_automatewoo_events
+0008.908 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_events)
+0008.914 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_events) to final table name (wp_automatewoo_events)
+0008.925 (R) [notice] Search and replacing table: wp_automatewoo_events: rows: 0
+0008.926 (R) [notice] Processing table (InnoDB):  joik_automatewoo_guest_meta - will restore as: nx_automatewoo_guest_meta
+0008.951 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_guest_meta)
+0008.957 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_guest_meta) to final table name (wp_automatewoo_guest_meta)
+0008.965 (R) [notice] Search and replacing table: wp_automatewoo_guest_meta: rows: 0
+0008.966 (R) [notice] Processing table (InnoDB):  joik_automatewoo_guests - will restore as: nx_automatewoo_guests
+0008.998 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_guests)
+0009.004 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_guests) to final table name (wp_automatewoo_guests)
+0009.015 (R) [notice] Search and replacing table: wp_automatewoo_guests: rows: 1
+0009.022 (R) [notice] Processing table (InnoDB):  joik_automatewoo_log_meta - will restore as: nx_automatewoo_log_meta
+0009.062 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_log_meta)
+0009.071 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_log_meta) to final table name (wp_automatewoo_log_meta)
+0009.081 (R) [notice] Search and replacing table: wp_automatewoo_log_meta: rows: 12
+0009.085 (R) [notice] Processing table (InnoDB):  joik_automatewoo_logs - will restore as: nx_automatewoo_logs
+0009.127 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_logs)
+0009.135 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_logs) to final table name (wp_automatewoo_logs)
+0009.148 (R) [notice] Search and replacing table: wp_automatewoo_logs: rows: 3
+0009.150 (R) [notice] Processing table (InnoDB):  joik_automatewoo_queue - will restore as: nx_automatewoo_queue
+0009.182 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_queue)
+0009.186 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_queue) to final table name (wp_automatewoo_queue)
+0009.195 (R) [notice] Search and replacing table: wp_automatewoo_queue: rows: 0
+0009.197 (R) [notice] Processing table (InnoDB):  joik_automatewoo_queue_meta - will restore as: nx_automatewoo_queue_meta
+0009.219 (R) [notice] Atomic restore: dropping original table (wp_automatewoo_queue_meta)
+0009.226 (R) [notice] Atomic restore: renaming new table (nx_automatewoo_queue_meta) to final table name (wp_automatewoo_queue_meta)
+0009.240 (R) [notice] Search and replacing table: wp_automatewoo_queue_meta: rows: 0
+0009.241 (R) [notice] Processing table (InnoDB):  joik_berocket_termmeta - will restore as: nx_berocket_termmeta
+0009.265 (R) [notice] Atomic restore: dropping original table (wp_berocket_termmeta)
+0009.274 (R) [notice] Atomic restore: renaming new table (nx_berocket_termmeta) to final table name (wp_berocket_termmeta)
+0009.285 (R) [notice] Search and replacing table: wp_berocket_termmeta: rows: 3
+0009.287 (R) [notice] Processing table (InnoDB):  joik_braapf_product_stock_status_parent - will restore as: nx_braapf_product_stock_status_parent
+0009.327 (R) [notice] Atomic restore: dropping original table (wp_braapf_product_stock_status_parent)
+0009.340 (R) [notice] Atomic restore: renaming new table (nx_braapf_product_stock_status_parent) to final table name (wp_braapf_product_stock_status_parent)
+0009.350 (R) [notice] Search and replacing table: wp_braapf_product_stock_status_parent: rows: 53
+0009.352 (R) [notice] Processing table (InnoDB):  joik_braapf_product_variation_attributes - will restore as: nx_braapf_product_variation_attributes
+0009.389 (R) [notice] Atomic restore: dropping original table (wp_braapf_product_variation_attributes)
+0009.395 (R) [notice] Atomic restore: renaming new table (nx_braapf_product_variation_attributes) to final table name (wp_braapf_product_variation_attributes)
+0009.406 (R) [notice] Search and replacing table: wp_braapf_product_variation_attributes: rows: 19
+0009.409 (R) [notice] Processing table (InnoDB):  joik_braapf_term_taxonomy_hierarchical - will restore as: nx_braapf_term_taxonomy_hierarchical
+0009.439 (R) [notice] Atomic restore: dropping original table (wp_braapf_term_taxonomy_hierarchical)
+0009.446 (R) [notice] Atomic restore: renaming new table (nx_braapf_term_taxonomy_hierarchical) to final table name (wp_braapf_term_taxonomy_hierarchical)
+0009.460 (R) [notice] Search and replacing table: wp_braapf_term_taxonomy_hierarchical: rows: 0
+0009.461 (R) [notice] Processing table (InnoDB):  joik_braapf_variable_attributes - will restore as: nx_braapf_variable_attributes
+0009.490 (R) [notice] Atomic restore: dropping original table (wp_braapf_variable_attributes)
+0009.497 (R) [notice] Atomic restore: renaming new table (nx_braapf_variable_attributes) to final table name (wp_braapf_variable_attributes)
+0009.518 (R) [notice] Search and replacing table: wp_braapf_variable_attributes: rows: 9
+0009.520 (R) [notice] Processing table (InnoDB):  joik_braapf_variation_attributes - will restore as: nx_braapf_variation_attributes
+0009.547 (R) [notice] Database queries processed: 150 in 9.40 seconds
+0009.549 (R) [notice] Atomic restore: dropping original table (wp_braapf_variation_attributes)
+0009.556 (R) [notice] Atomic restore: renaming new table (nx_braapf_variation_attributes) to final table name (wp_braapf_variation_attributes)
+0009.565 (R) [notice] Search and replacing table: wp_braapf_variation_attributes: rows: 9
+0009.567 (R) [notice] Processing table (InnoDB):  joik_content_tabs_ultimate_list - will restore as: nx_content_tabs_ultimate_list
+0009.586 (R) [notice] Atomic restore: dropping original table (wp_content_tabs_ultimate_list)
+0009.592 (R) [notice] Atomic restore: renaming new table (nx_content_tabs_ultimate_list) to final table name (wp_content_tabs_ultimate_list)
+0009.602 (R) [notice] Search and replacing table: wp_content_tabs_ultimate_list: rows: 0
+0009.604 (R) [notice] Processing table (InnoDB):  joik_content_tabs_ultimate_style - will restore as: nx_content_tabs_ultimate_style
+0009.662 (R) [notice] Atomic restore: dropping original table (wp_content_tabs_ultimate_style)
+0009.672 (R) [notice] Atomic restore: renaming new table (nx_content_tabs_ultimate_style) to final table name (wp_content_tabs_ultimate_style)
+0009.681 (R) [notice] Search and replacing table: wp_content_tabs_ultimate_style: rows: 0
+0009.682 (R) [notice] Processing table (InnoDB):  joik_duplicator_packages - will restore as: nx_duplicator_packages
+0009.718 (R) [notice] Atomic restore: dropping original table (wp_duplicator_packages)
+0009.725 (R) [notice] Atomic restore: renaming new table (nx_duplicator_packages) to final table name (wp_duplicator_packages)
+0009.734 (R) [notice] Search and replacing table: wp_duplicator_packages: rows: 1
+0009.737 (R) [notice] Processing table (InnoDB):  joik_eum_logs - will restore as: nx_eum_logs
+0009.776 (R) [notice] Atomic restore: dropping original table (wp_eum_logs)
+0009.783 (R) [notice] Atomic restore: renaming new table (nx_eum_logs) to final table name (wp_eum_logs)
+0009.790 (R) [notice] Skipping this table: data in this table (wp_eum_logs) should not be search/replaced
+0009.791 (R) [notice] Processing table (InnoDB):  joik_gf_addon_feed - will restore as: nx_gf_addon_feed
+0009.814 (R) [notice] Atomic restore: dropping original table (wp_gf_addon_feed)
+0009.822 (R) [notice] Atomic restore: renaming new table (nx_gf_addon_feed) to final table name (wp_gf_addon_feed)
+0009.832 (R) [notice] Search and replacing table: wp_gf_addon_feed: rows: 3
+0009.835 (R) [notice] Processing table (InnoDB):  joik_gf_draft_submissions - will restore as: nx_gf_draft_submissions
+0009.859 (R) [notice] Atomic restore: dropping original table (wp_gf_draft_submissions)
+0009.867 (R) [notice] Atomic restore: renaming new table (nx_gf_draft_submissions) to final table name (wp_gf_draft_submissions)
+0009.877 (R) [notice] Search and replacing table: wp_gf_draft_submissions: rows: 0
+0009.878 (R) [notice] Processing table (InnoDB):  joik_gf_entry - will restore as: nx_gf_entry
+0011.658 (R) [notice] Atomic restore: dropping original table (wp_gf_entry)
+0011.664 (R) [notice] Atomic restore: renaming new table (nx_gf_entry) to final table name (wp_gf_entry)
+0011.682 (R) [notice] Search and replacing table: wp_gf_entry: rows: 24746
+0018.173 (R) [notice] Searching and replacing reached row: 5000
+0024.962 (R) [notice] Searching and replacing reached row: 10000
+0032.597 (R) [notice] Searching and replacing reached row: 15000
+0040.076 (R) [notice] Searching and replacing reached row: 20000
+0046.977 (R) [notice] Processing table (InnoDB):  joik_gf_entry_meta - will restore as: nx_gf_entry_meta
+0049.898 (R) [notice] Database queries processed: 200 in 49.75 seconds
+0051.132 (R) [notice] Atomic restore: dropping original table (wp_gf_entry_meta)
+0051.139 (R) [notice] Atomic restore: renaming new table (nx_gf_entry_meta) to final table name (wp_gf_entry_meta)
+0051.171 (R) [notice] Search and replacing table: wp_gf_entry_meta: rows: 76845
+0051.281 (R) [notice] Searching and replacing reached row: 5000
+0051.403 (R) [notice] Searching and replacing reached row: 10000
+0051.545 (R) [notice] Searching and replacing reached row: 15000
+0051.673 (R) [notice] Searching and replacing reached row: 20000
+0051.804 (R) [notice] Searching and replacing reached row: 25000
+0051.955 (R) [notice] Searching and replacing reached row: 30000
+0052.095 (R) [notice] Searching and replacing reached row: 35000
+0052.235 (R) [notice] Searching and replacing reached row: 40000
+0052.380 (R) [notice] Searching and replacing reached row: 45000
+0052.593 (R) [notice] Searching and replacing reached row: 50000
+0052.742 (R) [notice] Searching and replacing reached row: 55000
+0052.911 (R) [notice] Searching and replacing reached row: 60000
+0053.084 (R) [notice] Searching and replacing reached row: 65000
+0053.253 (R) [notice] Searching and replacing reached row: 70000
+0053.425 (R) [notice] Searching and replacing reached row: 75000
+0053.537 (R) [notice] Processing table (InnoDB):  joik_gf_entry_notes - will restore as: nx_gf_entry_notes
+0055.872 (R) [notice] Atomic restore: dropping original table (wp_gf_entry_notes)
+0055.923 (R) [notice] Atomic restore: renaming new table (nx_gf_entry_notes) to final table name (wp_gf_entry_notes)
+0055.961 (R) [notice] Search and replacing table: wp_gf_entry_notes: rows: 39882
+0056.094 (R) [notice] Searching and replacing reached row: 5000
+0056.226 (R) [notice] Searching and replacing reached row: 10000
+0056.363 (R) [notice] Searching and replacing reached row: 15000
+0056.501 (R) [notice] Searching and replacing reached row: 20000
+0056.693 (R) [notice] Searching and replacing reached row: 25000
+0056.836 (R) [notice] Searching and replacing reached row: 30000
+0057.007 (R) [notice] Searching and replacing reached row: 35000
+0057.205 (R) [notice] Processing table (InnoDB):  joik_gf_form - will restore as: nx_gf_form
+0057.265 (R) [notice] Atomic restore: dropping original table (wp_gf_form)
+0057.272 (R) [notice] Atomic restore: renaming new table (nx_gf_form) to final table name (wp_gf_form)
+0057.282 (R) [notice] Search and replacing table: wp_gf_form: rows: 4
+0057.285 (R) [notice] Processing table (InnoDB):  joik_gf_form_meta - will restore as: nx_gf_form_meta
+0057.313 (R) [notice] Atomic restore: dropping original table (wp_gf_form_meta)
+0057.322 (R) [notice] Atomic restore: renaming new table (nx_gf_form_meta) to final table name (wp_gf_form_meta)
+0057.330 (R) [notice] Search and replacing table: wp_gf_form_meta: rows: 4
+0057.344 (R) [notice] Processing table (InnoDB):  joik_gf_form_revisions - will restore as: nx_gf_form_revisions
+0057.370 (R) [notice] Atomic restore: dropping original table (wp_gf_form_revisions)
+0057.377 (R) [notice] Atomic restore: renaming new table (nx_gf_form_revisions) to final table name (wp_gf_form_revisions)
+0057.389 (R) [notice] Search and replacing table: wp_gf_form_revisions: rows: 0
+0057.390 (R) [notice] Processing table (InnoDB):  joik_gf_form_view - will restore as: nx_gf_form_view
+0057.535 (R) [notice] Atomic restore: dropping original table (wp_gf_form_view)
+0057.542 (R) [notice] Atomic restore: renaming new table (nx_gf_form_view) to final table name (wp_gf_form_view)
+0057.555 (R) [notice] Search and replacing table: wp_gf_form_view: rows: 3356
+0057.623 (R) [notice] Processing table (InnoDB):  joik_gf_rest_api_keys - will restore as: nx_gf_rest_api_keys
+0057.652 (R) [notice] Atomic restore: dropping original table (wp_gf_rest_api_keys)
+0057.659 (R) [notice] Atomic restore: renaming new table (nx_gf_rest_api_keys) to final table name (wp_gf_rest_api_keys)
+0057.670 (R) [notice] Search and replacing table: wp_gf_rest_api_keys: rows: 0
+0057.671 (R) [notice] Processing table (InnoDB):  joik_mailchimp_carts - will restore as: nx_mailchimp_carts
+0057.695 (R) [notice] Atomic restore: dropping original table (wp_mailchimp_carts)
+0057.703 (R) [notice] Atomic restore: renaming new table (nx_mailchimp_carts) to final table name (wp_mailchimp_carts)
+0057.712 (R) [notice] Search and replacing table: wp_mailchimp_carts: rows: 6
+0057.716 (R) [notice] Processing table (InnoDB):  joik_mailchimp_jobs - will restore as: nx_mailchimp_jobs
+0057.759 (R) [notice] Atomic restore: dropping original table (wp_mailchimp_jobs)
+0057.767 (R) [notice] Database queries processed: 250 in 57.62 seconds
+0057.768 (R) [notice] Atomic restore: renaming new table (nx_mailchimp_jobs) to final table name (wp_mailchimp_jobs)
+0057.779 (R) [notice] Search and replacing table: wp_mailchimp_jobs: rows: 35
+0057.785 (R) [notice] Processing table (InnoDB):  joik_mailpoet_custom_fields - will restore as: nx_mailpoet_custom_fields
+0057.814 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_custom_fields)
+0057.824 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_custom_fields) to final table name (wp_mailpoet_custom_fields)
+0057.843 (R) [notice] Search and replacing table: wp_mailpoet_custom_fields: rows: 0
+0057.845 (R) [notice] Processing table (InnoDB):  joik_mailpoet_dynamic_segment_filters - will restore as: nx_mailpoet_dynamic_segment_filters
+0057.874 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_dynamic_segment_filters)
+0057.880 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_dynamic_segment_filters) to final table name (wp_mailpoet_dynamic_segment_filters)
+0057.891 (R) [notice] Search and replacing table: wp_mailpoet_dynamic_segment_filters: rows: 0
+0057.892 (R) [notice] Processing table (InnoDB):  joik_mailpoet_feature_flags - will restore as: nx_mailpoet_feature_flags
+0057.915 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_feature_flags)
+0057.922 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_feature_flags) to final table name (wp_mailpoet_feature_flags)
+0057.931 (R) [notice] Search and replacing table: wp_mailpoet_feature_flags: rows: 0
+0057.933 (R) [notice] Processing table (InnoDB):  joik_mailpoet_forms - will restore as: nx_mailpoet_forms
+0057.952 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_forms)
+0057.957 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_forms) to final table name (wp_mailpoet_forms)
+0057.965 (R) [notice] Search and replacing table: wp_mailpoet_forms: rows: 0
+0057.966 (R) [notice] Processing table (InnoDB):  joik_mailpoet_log - will restore as: nx_mailpoet_log
+0058.024 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_log)
+0058.032 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_log) to final table name (wp_mailpoet_log)
+0058.043 (R) [notice] Search and replacing table: wp_mailpoet_log: rows: 0
+0058.044 (R) [notice] Processing table (InnoDB):  joik_mailpoet_mapping_to_external_entities - will restore as: nx_mailpoet_mapping_to_external_entities
+0058.065 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_mapping_to_external_entities)
+0058.072 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_mapping_to_external_entities) to final table name (wp_mailpoet_mapping_to_external_entities)
+0058.082 (R) [notice] Search and replacing table: wp_mailpoet_mapping_to_external_entities: rows: 0
+0058.083 (R) [notice] Processing table (InnoDB):  joik_mailpoet_newsletter_links - will restore as: nx_mailpoet_newsletter_links
+0058.110 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_newsletter_links)
+0058.118 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_newsletter_links) to final table name (wp_mailpoet_newsletter_links)
+0058.128 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_links: rows: 0
+0058.129 (R) [notice] Processing table (InnoDB):  joik_mailpoet_newsletter_option - will restore as: nx_mailpoet_newsletter_option
+0058.153 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_newsletter_option)
+0058.159 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_newsletter_option) to final table name (wp_mailpoet_newsletter_option)
+0058.168 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_option: rows: 0
+0058.169 (R) [notice] Processing table (InnoDB):  joik_mailpoet_newsletter_option_fields - will restore as: nx_mailpoet_newsletter_option_fields
+0058.205 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_newsletter_option_fields)
+0058.212 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_newsletter_option_fields) to final table name (wp_mailpoet_newsletter_option_fields)
+0058.226 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_option_fields: rows: 20
+0058.228 (R) [notice] Processing table (InnoDB):  joik_mailpoet_newsletter_posts - will restore as: nx_mailpoet_newsletter_posts
+0058.250 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_newsletter_posts)
+0058.257 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_newsletter_posts) to final table name (wp_mailpoet_newsletter_posts)
+0058.270 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_posts: rows: 0
+0058.271 (R) [notice] Processing table (InnoDB):  joik_mailpoet_newsletter_segment - will restore as: nx_mailpoet_newsletter_segment
+0058.290 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_newsletter_segment)
+0058.297 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_newsletter_segment) to final table name (wp_mailpoet_newsletter_segment)
+0058.308 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_segment: rows: 0
+0058.309 (R) [notice] Processing table (InnoDB):  joik_mailpoet_newsletter_templates - will restore as: nx_mailpoet_newsletter_templates
+0058.482 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_newsletter_templates)
+0058.485 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_newsletter_templates) to final table name (wp_mailpoet_newsletter_templates)
+0058.497 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_templates: rows: 74
+0058.816 (R) [notice] Processing table (InnoDB):  joik_mailpoet_newsletters - will restore as: nx_mailpoet_newsletters
+0058.838 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_newsletters)
+0058.841 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_newsletters) to final table name (wp_mailpoet_newsletters)
+0058.848 (R) [notice] Search and replacing table: wp_mailpoet_newsletters: rows: 0
+0058.849 (R) [notice] Processing table (InnoDB):  joik_mailpoet_scheduled_task_subscribers - will restore as: nx_mailpoet_scheduled_task_subscribers
+0058.865 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_scheduled_task_subscribers)
+0058.884 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_scheduled_task_subscribers) to final table name (wp_mailpoet_scheduled_task_subscribers)
+0058.891 (R) [notice] Search and replacing table: wp_mailpoet_scheduled_task_subscribers: rows: 0
+0058.892 (R) [notice] Processing table (InnoDB):  joik_mailpoet_scheduled_tasks - will restore as: nx_mailpoet_scheduled_tasks
+0058.913 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_scheduled_tasks)
+0058.917 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_scheduled_tasks) to final table name (wp_mailpoet_scheduled_tasks)
+0058.925 (R) [notice] Search and replacing table: wp_mailpoet_scheduled_tasks: rows: 16
+0058.926 (R) [notice] Processing table (InnoDB):  joik_mailpoet_segments - will restore as: nx_mailpoet_segments
+0058.952 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_segments)
+0058.959 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_segments) to final table name (wp_mailpoet_segments)
+0058.969 (R) [notice] Search and replacing table: wp_mailpoet_segments: rows: 3
+0058.972 (R) [notice] Processing table (InnoDB):  joik_mailpoet_sending_queues - will restore as: nx_mailpoet_sending_queues
+0059.003 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_sending_queues)
+0059.009 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_sending_queues) to final table name (wp_mailpoet_sending_queues)
+0059.022 (R) [notice] Search and replacing table: wp_mailpoet_sending_queues: rows: 0
+0059.025 (R) [notice] Processing table (InnoDB):  joik_mailpoet_settings - will restore as: nx_mailpoet_settings
+0059.059 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_settings)
+0059.065 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_settings) to final table name (wp_mailpoet_settings)
+0059.076 (R) [notice] Search and replacing table: wp_mailpoet_settings: rows: 20
+0059.079 (R) [notice] Processing table (InnoDB):  joik_mailpoet_statistics_clicks - will restore as: nx_mailpoet_statistics_clicks
+0059.107 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_statistics_clicks)
+0059.111 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_statistics_clicks) to final table name (wp_mailpoet_statistics_clicks)
+0059.119 (R) [notice] Search and replacing table: wp_mailpoet_statistics_clicks: rows: 0
+0059.120 (R) [notice] Processing table (InnoDB):  joik_mailpoet_statistics_forms - will restore as: nx_mailpoet_statistics_forms
+0059.136 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_statistics_forms)
+0059.141 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_statistics_forms) to final table name (wp_mailpoet_statistics_forms)
+0059.149 (R) [notice] Search and replacing table: wp_mailpoet_statistics_forms: rows: 0
+0059.150 (R) [notice] Processing table (InnoDB):  joik_mailpoet_statistics_newsletters - will restore as: nx_mailpoet_statistics_newsletters
+0059.166 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_statistics_newsletters)
+0059.170 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_statistics_newsletters) to final table name (wp_mailpoet_statistics_newsletters)
+0059.175 (R) [notice] Search and replacing table: wp_mailpoet_statistics_newsletters: rows: 0
+0059.176 (R) [notice] Processing table (InnoDB):  joik_mailpoet_statistics_opens - will restore as: nx_mailpoet_statistics_opens
+0059.194 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_statistics_opens)
+0059.199 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_statistics_opens) to final table name (wp_mailpoet_statistics_opens)
+0059.207 (R) [notice] Search and replacing table: wp_mailpoet_statistics_opens: rows: 0
+0059.208 (R) [notice] Processing table (InnoDB):  joik_mailpoet_statistics_unsubscribes - will restore as: nx_mailpoet_statistics_unsubscribes
+0059.233 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_statistics_unsubscribes)
+0059.239 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_statistics_unsubscribes) to final table name (wp_mailpoet_statistics_unsubscribes)
+0059.245 (R) [notice] Search and replacing table: wp_mailpoet_statistics_unsubscribes: rows: 0
+0059.246 (R) [notice] Processing table (InnoDB):  joik_mailpoet_statistics_woocommerce_purchases - will restore as: nx_mailpoet_statistics_woocommerce_purchases
+0059.264 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_statistics_woocommerce_purchases)
+0059.268 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_statistics_woocommerce_purchases) to final table name (wp_mailpoet_statistics_woocommerce_purchases)
+0059.277 (R) [notice] Search and replacing table: wp_mailpoet_statistics_woocommerce_purchases: rows: 0
+0059.279 (R) [notice] Processing table (InnoDB):  joik_mailpoet_stats_notifications - will restore as: nx_mailpoet_stats_notifications
+0059.300 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_stats_notifications)
+0059.304 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_stats_notifications) to final table name (wp_mailpoet_stats_notifications)
+0059.328 (R) [notice] Search and replacing table: wp_mailpoet_stats_notifications: rows: 0
+0059.332 (R) [notice] Processing table (InnoDB):  joik_mailpoet_subscriber_custom_field - will restore as: nx_mailpoet_subscriber_custom_field
+0059.358 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_subscriber_custom_field)
+0059.364 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_subscriber_custom_field) to final table name (wp_mailpoet_subscriber_custom_field)
+0059.373 (R) [notice] Search and replacing table: wp_mailpoet_subscriber_custom_field: rows: 0
+0059.374 (R) [notice] Processing table (InnoDB):  joik_mailpoet_subscriber_ips - will restore as: nx_mailpoet_subscriber_ips
+0059.416 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_subscriber_ips)
+0059.433 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_subscriber_ips) to final table name (wp_mailpoet_subscriber_ips)
+0059.441 (R) [notice] Search and replacing table: wp_mailpoet_subscriber_ips: rows: 0
+0059.442 (R) [notice] Processing table (InnoDB):  joik_mailpoet_subscriber_segment - will restore as: nx_mailpoet_subscriber_segment
+0059.465 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_subscriber_segment)
+0059.470 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_subscriber_segment) to final table name (wp_mailpoet_subscriber_segment)
+0059.479 (R) [notice] Search and replacing table: wp_mailpoet_subscriber_segment: rows: 7
+0059.481 (R) [notice] Processing table (InnoDB):  joik_mailpoet_subscribers - will restore as: nx_mailpoet_subscribers
+0059.507 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_subscribers)
+0059.511 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_subscribers) to final table name (wp_mailpoet_subscribers)
+0059.518 (R) [notice] Search and replacing table: wp_mailpoet_subscribers: rows: 5
+0059.520 (R) [notice] Processing table (InnoDB):  joik_mailpoet_user_flags - will restore as: nx_mailpoet_user_flags
+0059.547 (R) [notice] Atomic restore: dropping original table (wp_mailpoet_user_flags)
+0059.551 (R) [notice] Atomic restore: renaming new table (nx_mailpoet_user_flags) to final table name (wp_mailpoet_user_flags)
+0059.559 (R) [notice] Search and replacing table: wp_mailpoet_user_flags: rows: 0
+0059.560 (R) [notice] Processing table (InnoDB):  joik_oxi_div_import - will restore as: nx_oxi_div_import
+0059.578 (R) [notice] Atomic restore: dropping original table (wp_oxi_div_import)
+0059.582 (R) [notice] Atomic restore: renaming new table (nx_oxi_div_import) to final table name (wp_oxi_div_import)
+0059.597 (R) [notice] Search and replacing table: wp_oxi_div_import: rows: 0
+0059.599 (R) [notice] Processing table (InnoDB):  joik_pimwick_gift_card - will restore as: nx_pimwick_gift_card
+0059.637 (R) [notice] Atomic restore: dropping original table (wp_pimwick_gift_card)
+0059.645 (R) [notice] Atomic restore: renaming new table (nx_pimwick_gift_card) to final table name (wp_pimwick_gift_card)
+0059.660 (R) [notice] Search and replacing table: wp_pimwick_gift_card: rows: 0
+0059.661 (R) [notice] Processing table (InnoDB):  joik_pimwick_gift_card_activity - will restore as: nx_pimwick_gift_card_activity
+0059.691 (R) [notice] Atomic restore: dropping original table (wp_pimwick_gift_card_activity)
+0059.699 (R) [notice] Atomic restore: renaming new table (nx_pimwick_gift_card_activity) to final table name (wp_pimwick_gift_card_activity)
+0059.710 (R) [notice] Search and replacing table: wp_pimwick_gift_card_activity: rows: 0
+0059.711 (R) [notice] Processing table (InnoDB):  joik_redirection_404 - will restore as: nx_redirection_404
+0059.844 (R) [notice] Atomic restore: dropping original table (wp_redirection_404)
+0059.848 (R) [notice] Atomic restore: renaming new table (nx_redirection_404) to final table name (wp_redirection_404)
+0059.853 (R) [notice] Skipping this table: data in this table (wp_redirection_404) should not be search/replaced
+0059.853 (R) [notice] Processing table (InnoDB):  joik_redirection_groups - will restore as: nx_redirection_groups
+0059.874 (R) [notice] Atomic restore: dropping original table (wp_redirection_groups)
+0059.877 (R) [notice] Atomic restore: renaming new table (nx_redirection_groups) to final table name (wp_redirection_groups)
+0059.884 (R) [notice] Search and replacing table: wp_redirection_groups: rows: 2
+0059.885 (R) [notice] Processing table (InnoDB):  joik_redirection_items - will restore as: nx_redirection_items
+0059.913 (R) [notice] Atomic restore: dropping original table (wp_redirection_items)
+0059.919 (R) [notice] Atomic restore: renaming new table (nx_redirection_items) to final table name (wp_redirection_items)
+0059.929 (R) [notice] Search and replacing table: wp_redirection_items: rows: 8
+0059.931 (R) [notice] Processing table (InnoDB):  joik_redirection_logs - will restore as: nx_redirection_logs
+0059.952 (R) [notice] Atomic restore: dropping original table (wp_redirection_logs)
+0059.957 (R) [notice] Atomic restore: renaming new table (nx_redirection_logs) to final table name (wp_redirection_logs)
+0059.962 (R) [notice] Skipping this table: data in this table (wp_redirection_logs) should not be search/replaced
+0059.963 (R) [notice] Processing table (InnoDB):  joik_sbi_feed_caches - will restore as: nx_sbi_feed_caches
+0059.989 (R) [notice] Atomic restore: dropping original table (wp_sbi_feed_caches)
+0059.993 (R) [notice] Atomic restore: renaming new table (nx_sbi_feed_caches) to final table name (wp_sbi_feed_caches)
+0060.001 (R) [notice] Search and replacing table: wp_sbi_feed_caches: rows: 8
+0060.003 (R) [notice] Processing table (InnoDB):  joik_sbi_feeds - will restore as: nx_sbi_feeds
+0060.022 (R) [notice] Atomic restore: dropping original table (wp_sbi_feeds)
+0060.026 (R) [notice] Atomic restore: renaming new table (nx_sbi_feeds) to final table name (wp_sbi_feeds)
+0060.034 (R) [notice] Search and replacing table: wp_sbi_feeds: rows: 1
+0060.037 (R) [notice] Processing table (InnoDB):  joik_sbi_instagram_feed_locator - will restore as: nx_sbi_instagram_feed_locator
+0060.058 (R) [notice] Atomic restore: dropping original table (wp_sbi_instagram_feed_locator)
+0060.062 (R) [notice] Atomic restore: renaming new table (nx_sbi_instagram_feed_locator) to final table name (wp_sbi_instagram_feed_locator)
+0060.070 (R) [notice] Search and replacing table: wp_sbi_instagram_feed_locator: rows: 1
+0060.072 (R) [notice] Processing table (InnoDB):  joik_sbi_instagram_feeds_posts - will restore as: nx_sbi_instagram_feeds_posts
+0060.091 (R) [notice] Atomic restore: dropping original table (wp_sbi_instagram_feeds_posts)
+0060.095 (R) [notice] Atomic restore: renaming new table (nx_sbi_instagram_feeds_posts) to final table name (wp_sbi_instagram_feeds_posts)
+0060.102 (R) [notice] Search and replacing table: wp_sbi_instagram_feeds_posts: rows: 59
+0060.105 (R) [notice] Processing table (InnoDB):  joik_sbi_instagram_posts - will restore as: nx_sbi_instagram_posts
+0060.142 (R) [notice] Atomic restore: dropping original table (wp_sbi_instagram_posts)
+0060.146 (R) [notice] Atomic restore: renaming new table (nx_sbi_instagram_posts) to final table name (wp_sbi_instagram_posts)
+0060.158 (R) [notice] Search and replacing table: wp_sbi_instagram_posts: rows: 59
+0060.163 (R) [notice] Processing table (InnoDB):  joik_sbi_sources - will restore as: nx_sbi_sources
+0060.187 (R) [notice] Atomic restore: dropping original table (wp_sbi_sources)
+0060.194 (R) [notice] Atomic restore: renaming new table (nx_sbi_sources) to final table name (wp_sbi_sources)
+0060.208 (R) [notice] Search and replacing table: wp_sbi_sources: rows: 1
+0060.212 (R) [notice] Processing table (InnoDB):  joik_wc_admin_note_actions - will restore as: nx_wc_admin_note_actions
+0060.249 (R) [notice] Atomic restore: dropping original table (wp_wc_admin_note_actions)
+0060.258 (R) [notice] Atomic restore: renaming new table (nx_wc_admin_note_actions) to final table name (wp_wc_admin_note_actions)
+0060.275 (R) [notice] Search and replacing table: wp_wc_admin_note_actions: rows: 27
+0060.290 (R) [notice] Processing table (InnoDB):  joik_wc_admin_notes - will restore as: nx_wc_admin_notes
+0060.316 (R) [notice] Atomic restore: dropping original table (wp_wc_admin_notes)
+0060.322 (R) [notice] Atomic restore: renaming new table (nx_wc_admin_notes) to final table name (wp_wc_admin_notes)
+0060.336 (R) [notice] Search and replacing table: wp_wc_admin_notes: rows: 26
+0060.383 (R) [notice] Processing table (InnoDB):  joik_wc_customer_lookup - will restore as: nx_wc_customer_lookup
+0060.443 (R) [notice] Atomic restore: dropping original table (wp_wc_customer_lookup)
+0060.466 (R) [notice] Atomic restore: renaming new table (nx_wc_customer_lookup) to final table name (wp_wc_customer_lookup)
+0060.476 (R) [notice] Search and replacing table: wp_wc_customer_lookup: rows: 99
+0060.480 (R) [notice] Processing table (InnoDB):  joik_wc_download_log - will restore as: nx_wc_download_log
+0060.497 (R) [notice] Atomic restore: dropping original table (wp_wc_download_log)
+0060.501 (R) [notice] Atomic restore: renaming new table (nx_wc_download_log) to final table name (wp_wc_download_log)
+0060.508 (R) [notice] Search and replacing table: wp_wc_download_log: rows: 0
+0060.509 (R) [notice] Processing table (InnoDB):  joik_wc_order_addresses - will restore as: nx_wc_order_addresses
+0060.530 (R) [notice] Atomic restore: dropping original table (wp_wc_order_addresses)
+0060.536 (R) [notice] Atomic restore: renaming new table (nx_wc_order_addresses) to final table name (wp_wc_order_addresses)
+0060.544 (R) [notice] Search and replacing table: wp_wc_order_addresses: rows: 0
+0060.545 (R) [notice] Processing table (InnoDB):  joik_wc_order_coupon_lookup - will restore as: nx_wc_order_coupon_lookup
+0060.571 (R) [notice] Atomic restore: dropping original table (wp_wc_order_coupon_lookup)
+0060.575 (R) [notice] Atomic restore: renaming new table (nx_wc_order_coupon_lookup) to final table name (wp_wc_order_coupon_lookup)
+0060.582 (R) [notice] Search and replacing table: wp_wc_order_coupon_lookup: rows: 9
+0060.583 (R) [notice] Processing table (InnoDB):  joik_wc_order_operational_data - will restore as: nx_wc_order_operational_data
+0060.598 (R) [notice] Atomic restore: dropping original table (wp_wc_order_operational_data)
+0060.602 (R) [notice] Atomic restore: renaming new table (nx_wc_order_operational_data) to final table name (wp_wc_order_operational_data)
+0060.608 (R) [notice] Search and replacing table: wp_wc_order_operational_data: rows: 0
+0060.609 (R) [notice] Processing table (InnoDB):  joik_wc_order_product_lookup - will restore as: nx_wc_order_product_lookup
+0060.641 (R) [notice] Atomic restore: dropping original table (wp_wc_order_product_lookup)
+0060.645 (R) [notice] Atomic restore: renaming new table (nx_wc_order_product_lookup) to final table name (wp_wc_order_product_lookup)
+0060.652 (R) [notice] Search and replacing table: wp_wc_order_product_lookup: rows: 133
+0060.658 (R) [notice] Processing table (InnoDB):  joik_wc_order_stats - will restore as: nx_wc_order_stats
+0060.681 (R) [notice] Atomic restore: dropping original table (wp_wc_order_stats)
+0060.686 (R) [notice] Atomic restore: renaming new table (nx_wc_order_stats) to final table name (wp_wc_order_stats)
+0060.693 (R) [notice] Search and replacing table: wp_wc_order_stats: rows: 110
+0060.698 (R) [notice] Processing table (InnoDB):  joik_wc_order_tax_lookup - will restore as: nx_wc_order_tax_lookup
+0060.723 (R) [notice] Atomic restore: dropping original table (wp_wc_order_tax_lookup)
+0060.726 (R) [notice] Atomic restore: renaming new table (nx_wc_order_tax_lookup) to final table name (wp_wc_order_tax_lookup)
+0060.734 (R) [notice] Search and replacing table: wp_wc_order_tax_lookup: rows: 56
+0060.737 (R) [notice] Processing table (InnoDB):  joik_wc_orders - will restore as: nx_wc_orders
+0060.795 (R) [notice] Atomic restore: dropping original table (wp_wc_orders)
+0060.800 (R) [notice] Atomic restore: renaming new table (nx_wc_orders) to final table name (wp_wc_orders)
+0060.809 (R) [notice] Search and replacing table: wp_wc_orders: rows: 0
+0060.810 (R) [notice] Processing table (InnoDB):  joik_wc_orders_meta - will restore as: nx_wc_orders_meta
+0060.836 (R) [notice] Atomic restore: dropping original table (wp_wc_orders_meta)
+0060.842 (R) [notice] Atomic restore: renaming new table (nx_wc_orders_meta) to final table name (wp_wc_orders_meta)
+0060.860 (R) [notice] Search and replacing table: wp_wc_orders_meta: rows: 57
+0060.864 (R) [notice] Processing table (InnoDB):  joik_wc_product_attributes_lookup - will restore as: nx_wc_product_attributes_lookup
+0060.911 (R) [notice] Atomic restore: dropping original table (wp_wc_product_attributes_lookup)
+0060.916 (R) [notice] Atomic restore: renaming new table (nx_wc_product_attributes_lookup) to final table name (wp_wc_product_attributes_lookup)
+0060.925 (R) [notice] Search and replacing table: wp_wc_product_attributes_lookup: rows: 136
+0060.932 (R) [notice] Processing table (InnoDB):  joik_wc_product_download_directories - will restore as: nx_wc_product_download_directories
+0060.964 (R) [notice] Atomic restore: dropping original table (wp_wc_product_download_directories)
+0060.971 (R) [notice] Atomic restore: renaming new table (nx_wc_product_download_directories) to final table name (wp_wc_product_download_directories)
+0060.981 (R) [notice] Search and replacing table: wp_wc_product_download_directories: rows: 2
+0060.984 (R) [notice] Processing table (InnoDB):  joik_wc_rate_limits - will restore as: nx_wc_rate_limits
+0061.002 (R) [notice] Atomic restore: dropping original table (wp_wc_rate_limits)
+0061.007 (R) [notice] Atomic restore: renaming new table (nx_wc_rate_limits) to final table name (wp_wc_rate_limits)
+0061.013 (R) [notice] Search and replacing table: wp_wc_rate_limits: rows: 0
+0061.014 (R) [notice] Processing table (InnoDB):  joik_wc_webhooks - will restore as: nx_wc_webhooks
+0061.031 (R) [notice] Atomic restore: dropping original table (wp_wc_webhooks)
+0061.037 (R) [notice] Atomic restore: renaming new table (nx_wc_webhooks) to final table name (wp_wc_webhooks)
+0061.043 (R) [notice] Search and replacing table: wp_wc_webhooks: rows: 0
+0061.044 (R) [notice] Processing table (InnoDB):  joik_wfpklist_template_data - will restore as: nx_wfpklist_template_data
+0061.110 (R) [notice] Atomic restore: dropping original table (wp_wfpklist_template_data)
+0061.115 (R) [notice] Atomic restore: renaming new table (nx_wfpklist_template_data) to final table name (wp_wfpklist_template_data)
+0061.123 (R) [notice] Search and replacing table: wp_wfpklist_template_data: rows: 5
+0061.126 (R) [notice] Processing table (InnoDB):  joik_woo_shippment_provider - will restore as: nx_woo_shippment_provider
+0061.191 (R) [notice] Atomic restore: dropping original table (wp_woo_shippment_provider)
+0061.196 (R) [notice] Atomic restore: renaming new table (nx_woo_shippment_provider) to final table name (wp_woo_shippment_provider)
+0061.203 (R) [notice] Search and replacing table: wp_woo_shippment_provider: rows: 926
+0061.234 (R) [notice] Processing table (InnoDB):  joik_woocommerce_api_keys - will restore as: nx_woocommerce_api_keys
+0061.254 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_api_keys)
+0061.260 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_api_keys) to final table name (wp_woocommerce_api_keys)
+0061.272 (R) [notice] Search and replacing table: wp_woocommerce_api_keys: rows: 0
+0061.273 (R) [notice] Processing table (InnoDB):  joik_woocommerce_attribute_taxonomies - will restore as: nx_woocommerce_attribute_taxonomies
+0061.297 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_attribute_taxonomies)
+0061.302 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_attribute_taxonomies) to final table name (wp_woocommerce_attribute_taxonomies)
+0061.309 (R) [notice] Search and replacing table: wp_woocommerce_attribute_taxonomies: rows: 7
+0061.311 (R) [notice] Processing table (InnoDB):  joik_woocommerce_downloadable_product_permissions - will restore as: nx_woocommerce_downloadable_product_permissions
+0061.338 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_downloadable_product_permissions)
+0061.357 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_downloadable_product_permissions) to final table name (wp_woocommerce_downloadable_product_permissions)
+0061.367 (R) [notice] Search and replacing table: wp_woocommerce_downloadable_product_permissions: rows: 0
+0061.368 (R) [notice] Processing table (InnoDB):  joik_woocommerce_exported_csv_items - will restore as: nx_woocommerce_exported_csv_items
+0062.528 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_exported_csv_items)
+0062.533 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_exported_csv_items) to final table name (wp_woocommerce_exported_csv_items)
+0062.543 (R) [notice] Search and replacing table: wp_woocommerce_exported_csv_items: rows: 12188
+0062.634 (R) [notice] Searching and replacing reached row: 5000
+0062.736 (R) [notice] Searching and replacing reached row: 10000
+0062.784 (R) [notice] Processing table (InnoDB):  joik_woocommerce_log - will restore as: nx_woocommerce_log
+0062.813 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_log)
+0062.820 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_log) to final table name (wp_woocommerce_log)
+0062.836 (R) [notice] Search and replacing table: wp_woocommerce_log: rows: 0
+0062.837 (R) [notice] Processing table (InnoDB):  joik_woocommerce_order_items - will restore as: nx_woocommerce_order_items
+0062.866 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_order_items)
+0062.928 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_order_items) to final table name (wp_woocommerce_order_items)
+0062.984 (R) [notice] Skipping this table: data in this table (wp_woocommerce_order_items) should not be search/replaced
+0062.985 (R) [notice] Processing table (InnoDB):  joik_woocommerce_payment_tokens - will restore as: nx_woocommerce_payment_tokens
+0063.026 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_payment_tokens)
+0063.033 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_payment_tokens) to final table name (wp_woocommerce_payment_tokens)
+0063.048 (R) [notice] Search and replacing table: wp_woocommerce_payment_tokens: rows: 0
+0063.049 (R) [notice] Processing table (InnoDB):  joik_woocommerce_sessions - will restore as: nx_woocommerce_sessions
+0063.082 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_sessions)
+0063.089 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_sessions) to final table name (wp_woocommerce_sessions)
+0063.099 (R) [notice] Skipping this table: data in this table (wp_woocommerce_sessions) should not be search/replaced
+0063.100 (R) [notice] Processing table (InnoDB):  joik_woocommerce_shipping_zone_locations - will restore as: nx_woocommerce_shipping_zone_locations
+0063.134 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_shipping_zone_locations)
+0063.142 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_shipping_zone_locations) to final table name (wp_woocommerce_shipping_zone_locations)
+0063.153 (R) [notice] Search and replacing table: wp_woocommerce_shipping_zone_locations: rows: 1
+0063.155 (R) [notice] Processing table (InnoDB):  joik_woocommerce_shipping_zone_methods - will restore as: nx_woocommerce_shipping_zone_methods
+0063.181 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_shipping_zone_methods)
+0063.188 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_shipping_zone_methods) to final table name (wp_woocommerce_shipping_zone_methods)
+0063.200 (R) [notice] Search and replacing table: wp_woocommerce_shipping_zone_methods: rows: 2
+0063.204 (R) [notice] Processing table (InnoDB):  joik_woocommerce_shipping_zones - will restore as: nx_woocommerce_shipping_zones
+0063.229 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_shipping_zones)
+0063.236 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_shipping_zones) to final table name (wp_woocommerce_shipping_zones)
+0063.247 (R) [notice] Search and replacing table: wp_woocommerce_shipping_zones: rows: 2
+0063.249 (R) [notice] Processing table (InnoDB):  joik_woocommerce_square_customers - will restore as: nx_woocommerce_square_customers
+0063.275 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_square_customers)
+0063.314 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_square_customers) to final table name (wp_woocommerce_square_customers)
+0063.341 (R) [notice] Search and replacing table: wp_woocommerce_square_customers: rows: 53
+0063.344 (R) [notice] Processing table (InnoDB):  joik_woocommerce_tax_rate_locations - will restore as: nx_woocommerce_tax_rate_locations
+0063.371 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_tax_rate_locations)
+0063.377 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_tax_rate_locations) to final table name (wp_woocommerce_tax_rate_locations)
+0063.388 (R) [notice] Search and replacing table: wp_woocommerce_tax_rate_locations: rows: 0
+0063.389 (R) [notice] Processing table (InnoDB):  joik_woocommerce_tax_rates - will restore as: nx_woocommerce_tax_rates
+0063.423 (R) [notice] Atomic restore: dropping original table (wp_woocommerce_tax_rates)
+0063.429 (R) [notice] Atomic restore: renaming new table (nx_woocommerce_tax_rates) to final table name (wp_woocommerce_tax_rates)
+0063.439 (R) [notice] Search and replacing table: wp_woocommerce_tax_rates: rows: 1
+0063.442 (R) [notice] Processing table (InnoDB):  joik_wpeditor_settings - will restore as: nx_wpeditor_settings
+0063.465 (R) [notice] Atomic restore: dropping original table (wp_wpeditor_settings)
+0063.472 (R) [notice] Atomic restore: renaming new table (nx_wpeditor_settings) to final table name (wp_wpeditor_settings)
+0063.483 (R) [notice] Search and replacing table: wp_wpeditor_settings: rows: 24
+0063.485 (R) [notice] Processing table (InnoDB):  joik_wpforms_tasks_meta - will restore as: nx_wpforms_tasks_meta
+0063.507 (R) [notice] Atomic restore: dropping original table (wp_wpforms_tasks_meta)
+0063.512 (R) [notice] Atomic restore: renaming new table (nx_wpforms_tasks_meta) to final table name (wp_wpforms_tasks_meta)
+0063.520 (R) [notice] Search and replacing table: wp_wpforms_tasks_meta: rows: 15
+0063.523 (R) [notice] Processing table (InnoDB):  joik_wpie_template - will restore as: nx_wpie_template
+0063.572 (R) [notice] Atomic restore: dropping original table (wp_wpie_template)
+0063.580 (R) [notice] Atomic restore: renaming new table (nx_wpie_template) to final table name (wp_wpie_template)
+0063.597 (R) [notice] Search and replacing table: wp_wpie_template: rows: 6
+0063.604 (R) [notice] Processing table (InnoDB):  joik_wt_iew_action_history - will restore as: nx_wt_iew_action_history
+0063.646 (R) [notice] Atomic restore: dropping original table (wp_wt_iew_action_history)
+0063.653 (R) [notice] Atomic restore: renaming new table (nx_wt_iew_action_history) to final table name (wp_wt_iew_action_history)
+0063.673 (R) [notice] Search and replacing table: wp_wt_iew_action_history: rows: 7
+0063.693 (R) [notice] Processing table (InnoDB):  joik_wt_iew_cron - will restore as: nx_wt_iew_cron
+0063.715 (R) [notice] Atomic restore: dropping original table (wp_wt_iew_cron)
+0063.722 (R) [notice] Atomic restore: renaming new table (nx_wt_iew_cron) to final table name (wp_wt_iew_cron)
+0063.733 (R) [notice] Search and replacing table: wp_wt_iew_cron: rows: 0
+0063.734 (R) [notice] Processing table (InnoDB):  joik_wt_iew_ftp - will restore as: nx_wt_iew_ftp
+0063.754 (R) [notice] Atomic restore: dropping original table (wp_wt_iew_ftp)
+0063.761 (R) [notice] Atomic restore: renaming new table (nx_wt_iew_ftp) to final table name (wp_wt_iew_ftp)
+0063.772 (R) [notice] Search and replacing table: wp_wt_iew_ftp: rows: 0
+0063.774 (R) [notice] Processing table (InnoDB):  joik_wt_iew_mapping_template - will restore as: nx_wt_iew_mapping_template
+0063.794 (R) [notice] Atomic restore: dropping original table (wp_wt_iew_mapping_template)
+0063.801 (R) [notice] Atomic restore: renaming new table (nx_wt_iew_mapping_template) to final table name (wp_wt_iew_mapping_template)
+0063.814 (R) [notice] Search and replacing table: wp_wt_iew_mapping_template: rows: 0
+0063.818 (R) [notice] Processing table (InnoDB):  joik_yoast_indexable - will restore as: nx_yoast_indexable
+0063.892 (R) [notice] Atomic restore: dropping original table (wp_yoast_indexable)
+0063.898 (R) [notice] Atomic restore: renaming new table (nx_yoast_indexable) to final table name (wp_yoast_indexable)
+0063.909 (R) [notice] Search and replacing table: wp_yoast_indexable: rows: 211
+0064.261 (R) [notice] Processing table (InnoDB):  joik_yoast_indexable_hierarchy - will restore as: nx_yoast_indexable_hierarchy
+0064.291 (R) [notice] Atomic restore: dropping original table (wp_yoast_indexable_hierarchy)
+0064.297 (R) [notice] Database queries processed: 500 in 64.15 seconds
+0064.298 (R) [notice] Atomic restore: renaming new table (nx_yoast_indexable_hierarchy) to final table name (wp_yoast_indexable_hierarchy)
+0064.307 (R) [notice] Search and replacing table: wp_yoast_indexable_hierarchy: rows: 166
+0064.312 (R) [notice] Processing table (InnoDB):  joik_yoast_migrations - will restore as: nx_yoast_migrations
+0064.342 (R) [notice] Atomic restore: dropping original table (wp_yoast_migrations)
+0064.348 (R) [notice] Atomic restore: renaming new table (nx_yoast_migrations) to final table name (wp_yoast_migrations)
+0064.360 (R) [notice] Search and replacing table: wp_yoast_migrations: rows: 24
+0064.363 (R) [notice] Processing table (InnoDB):  joik_yoast_primary_term - will restore as: nx_yoast_primary_term
+0064.395 (R) [notice] Atomic restore: dropping original table (wp_yoast_primary_term)
+0064.401 (R) [notice] Atomic restore: renaming new table (nx_yoast_primary_term) to final table name (wp_yoast_primary_term)
+0064.423 (R) [notice] Search and replacing table: wp_yoast_primary_term: rows: 32
+0064.426 (R) [notice] Processing table (InnoDB):  joik_yoast_seo_links - will restore as: nx_yoast_seo_links
+0064.446 (R) [notice] Disabling Maintenance mode&#8230;
+0064.447 (R) [notice] Atomic restore: dropping original table (wp_yoast_seo_links)
+0064.454 (R) [notice] Atomic restore: renaming new table (nx_yoast_seo_links) to final table name (wp_yoast_seo_links)
+0064.464 (R) [notice] Search and replacing table: wp_yoast_seo_links: rows: 47
+0064.494 (R) [notice] Finished: lines processed: 512 in 64.35 seconds
+0064.496 (R) [notice] Cleaning up rubbish...
+0064.500 (R) [notice] Database search and replace: replace https://stg-joimoteacom-staging.kinsta.cloud in backup dump with http://localhost:8080
+0064.501 (R) [notice] Database search and replace: replace http://www.stg-joimoteacom-staging.kinsta.cloud in backup dump with http://localhost:8080
+0064.502 (R) [notice] Database search and replace: replace http://stg-joimoteacom-staging.kinsta.cloud in backup dump with http://localhost:8080
+0064.503 (R) [notice] Database search and replace: replace https://www.stg-joimoteacom-staging.kinsta.cloud in backup dump with http://localhost:8080
+0064.504 (R) [notice] Database search and replace: replace /www/joimoteacom_551/public in backup dump with /var/www/html
+0064.509 (R) [notice] Search and replacing table: wp_actionscheduler_actions: already done
+0064.510 (R) [notice] Search and replacing table: wp_actionscheduler_claims: already done
+0064.511 (R) [notice] Search and replacing table: wp_actionscheduler_groups: already done
+0064.512 (R) [notice] Search and replacing table: wp_actionscheduler_logs: already done
+0064.512 (R) [notice] Search and replacing table: wp_alm: already done
+0064.513 (R) [notice] Search and replacing table: wp_automatewoo_abandoned_carts: already done
+0064.514 (R) [notice] Search and replacing table: wp_automatewoo_customer_meta: already done
+0064.515 (R) [notice] Search and replacing table: wp_automatewoo_customers: already done
+0064.516 (R) [notice] Search and replacing table: wp_automatewoo_events: already done
+0064.517 (R) [notice] Search and replacing table: wp_automatewoo_guest_meta: already done
+0064.518 (R) [notice] Search and replacing table: wp_automatewoo_guests: already done
+0064.519 (R) [notice] Search and replacing table: wp_automatewoo_log_meta: already done
+0064.520 (R) [notice] Search and replacing table: wp_automatewoo_logs: already done
+0064.521 (R) [notice] Search and replacing table: wp_automatewoo_queue: already done
+0064.522 (R) [notice] Search and replacing table: wp_automatewoo_queue_meta: already done
+0064.523 (R) [notice] Search and replacing table: wp_berocket_termmeta: already done
+0064.524 (R) [notice] Search and replacing table: wp_braapf_product_stock_status_parent: already done
+0064.525 (R) [notice] Search and replacing table: wp_braapf_product_variation_attributes: already done
+0064.526 (R) [notice] Search and replacing table: wp_braapf_term_taxonomy_hierarchical: already done
+0064.527 (R) [notice] Search and replacing table: wp_braapf_variable_attributes: already done
+0064.527 (R) [notice] Search and replacing table: wp_braapf_variation_attributes: already done
+0064.528 (R) [notice] Search and replacing table: wp_commentmeta: already done
+0064.529 (R) [notice] Search and replacing table: wp_comments: already done
+0064.530 (R) [notice] Search and replacing table: wp_content_tabs_ultimate_list: already done
+0064.531 (R) [notice] Search and replacing table: wp_content_tabs_ultimate_style: already done
+0064.532 (R) [notice] Search and replacing table: wp_duplicator_packages: already done
+0064.532 (R) [notice] Search and replacing table: wp_eum_logs: already done
+0064.533 (R) [notice] Search and replacing table: wp_gf_addon_feed: already done
+0064.534 (R) [notice] Search and replacing table: wp_gf_draft_submissions: already done
+0064.535 (R) [notice] Search and replacing table: wp_gf_entry: already done
+0064.535 (R) [notice] Search and replacing table: wp_gf_entry_meta: already done
+0064.537 (R) [notice] Search and replacing table: wp_gf_entry_notes: already done
+0064.538 (R) [notice] Search and replacing table: wp_gf_form: already done
+0064.538 (R) [notice] Search and replacing table: wp_gf_form_meta: already done
+0064.539 (R) [notice] Search and replacing table: wp_gf_form_revisions: already done
+0064.540 (R) [notice] Search and replacing table: wp_gf_form_view: already done
+0064.541 (R) [notice] Search and replacing table: wp_gf_rest_api_keys: already done
+0064.542 (R) [notice] Search and replacing table: wp_links: already done
+0064.542 (R) [notice] Search and replacing table: wp_mailchimp_carts: already done
+0064.543 (R) [notice] Search and replacing table: wp_mailchimp_jobs: already done
+0064.544 (R) [notice] Search and replacing table: wp_mailpoet_custom_fields: already done
+0064.545 (R) [notice] Search and replacing table: wp_mailpoet_dynamic_segment_filters: already done
+0064.546 (R) [notice] Search and replacing table: wp_mailpoet_feature_flags: already done
+0064.546 (R) [notice] Search and replacing table: wp_mailpoet_forms: already done
+0064.547 (R) [notice] Search and replacing table: wp_mailpoet_log: already done
+0064.548 (R) [notice] Search and replacing table: wp_mailpoet_mapping_to_external_entities: already done
+0064.549 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_links: already done
+0064.550 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_option: already done
+0064.551 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_option_fields: already done
+0064.552 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_posts: already done
+0064.553 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_segment: already done
+0064.554 (R) [notice] Search and replacing table: wp_mailpoet_newsletter_templates: already done
+0064.555 (R) [notice] Search and replacing table: wp_mailpoet_newsletters: already done
+0064.556 (R) [notice] Search and replacing table: wp_mailpoet_scheduled_task_subscribers: already done
+0064.557 (R) [notice] Search and replacing table: wp_mailpoet_scheduled_tasks: already done
+0064.558 (R) [notice] Search and replacing table: wp_mailpoet_segments: already done
+0064.559 (R) [notice] Search and replacing table: wp_mailpoet_sending_queues: already done
+0064.560 (R) [notice] Search and replacing table: wp_mailpoet_settings: already done
+0064.561 (R) [notice] Search and replacing table: wp_mailpoet_statistics_clicks: already done
+0064.562 (R) [notice] Search and replacing table: wp_mailpoet_statistics_forms: already done
+0064.564 (R) [notice] Search and replacing table: wp_mailpoet_statistics_newsletters: already done
+0064.565 (R) [notice] Search and replacing table: wp_mailpoet_statistics_opens: already done
+0064.566 (R) [notice] Search and replacing table: wp_mailpoet_statistics_unsubscribes: already done
+0064.567 (R) [notice] Search and replacing table: wp_mailpoet_statistics_woocommerce_purchases: already done
+0064.569 (R) [notice] Search and replacing table: wp_mailpoet_stats_notifications: already done
+0064.570 (R) [notice] Search and replacing table: wp_mailpoet_subscriber_custom_field: already done
+0064.571 (R) [notice] Search and replacing table: wp_mailpoet_subscriber_ips: already done
+0064.572 (R) [notice] Search and replacing table: wp_mailpoet_subscriber_segment: already done
+0064.573 (R) [notice] Search and replacing table: wp_mailpoet_subscribers: already done
+0064.574 (R) [notice] Search and replacing table: wp_mailpoet_user_flags: already done
+0064.575 (R) [notice] Search and replacing table: wp_options: already done
+0064.576 (R) [notice] Search and replacing table: wp_oxi_div_import: already done
+0064.577 (R) [notice] Search and replacing table: wp_pimwick_gift_card: already done
+0064.578 (R) [notice] Search and replacing table: wp_pimwick_gift_card_activity: already done
+0064.579 (R) [notice] Search and replacing table: wp_postmeta: already done
+0064.580 (R) [notice] Search and replacing table: wp_posts: already done
+0064.582 (R) [notice] Search and replacing table: wp_redirection_404: already done
+0064.583 (R) [notice] Search and replacing table: wp_redirection_groups: already done
+0064.585 (R) [notice] Search and replacing table: wp_redirection_items: already done
+0064.586 (R) [notice] Search and replacing table: wp_redirection_logs: already done
+0064.587 (R) [notice] Search and replacing table: wp_sbi_feed_caches: already done
+0064.589 (R) [notice] Search and replacing table: wp_sbi_feeds: already done
+0064.590 (R) [notice] Search and replacing table: wp_sbi_instagram_feed_locator: already done
+0064.591 (R) [notice] Search and replacing table: wp_sbi_instagram_feeds_posts: already done
+0064.592 (R) [notice] Search and replacing table: wp_sbi_instagram_posts: already done
+0064.593 (R) [notice] Search and replacing table: wp_sbi_sources: already done
+0064.594 (R) [notice] Search and replacing table: wp_term_relationships: already done
+0064.595 (R) [notice] Search and replacing table: wp_term_taxonomy: already done
+0064.596 (R) [notice] Search and replacing table: wp_termmeta: already done
+0064.597 (R) [notice] Search and replacing table: wp_terms: already done
+0064.598 (R) [notice] Search and replacing table: wp_usermeta: already done
+0064.599 (R) [notice] Search and replacing table: wp_users: already done
+0064.599 (R) [notice] Search and replacing table: wp_wc_admin_note_actions: already done
+0064.600 (R) [notice] Search and replacing table: wp_wc_admin_notes: already done
+0064.601 (R) [notice] Search and replacing table: wp_wc_category_lookup: already done
+0064.602 (R) [notice] Search and replacing table: wp_wc_customer_lookup: already done
+0064.603 (R) [notice] Search and replacing table: wp_wc_download_log: already done
+0064.604 (R) [notice] Search and replacing table: wp_wc_order_addresses: already done
+0064.605 (R) [notice] Search and replacing table: wp_wc_order_coupon_lookup: already done
+0064.606 (R) [notice] Search and replacing table: wp_wc_order_operational_data: already done
+0064.607 (R) [notice] Search and replacing table: wp_wc_order_product_lookup: already done
+0064.608 (R) [notice] Search and replacing table: wp_wc_order_stats: already done
+0064.608 (R) [notice] Search and replacing table: wp_wc_order_tax_lookup: already done
+0064.609 (R) [notice] Search and replacing table: wp_wc_orders: already done
+0064.610 (R) [notice] Search and replacing table: wp_wc_orders_meta: already done
+0064.611 (R) [notice] Search and replacing table: wp_wc_product_attributes_lookup: already done
+0064.613 (R) [notice] Search and replacing table: wp_wc_product_download_directories: already done
+0064.615 (R) [notice] Search and replacing table: wp_wc_product_meta_lookup: already done
+0064.617 (R) [notice] Search and replacing table: wp_wc_rate_limits: already done
+0064.618 (R) [notice] Search and replacing table: wp_wc_reserved_stock: already done
+0064.619 (R) [notice] Search and replacing table: wp_wc_tax_rate_classes: already done
+0064.620 (R) [notice] Search and replacing table: wp_wc_webhooks: already done
+0064.622 (R) [notice] Search and replacing table: wp_wfpklist_template_data: already done
+0064.623 (R) [notice] Search and replacing table: wp_woo_shippment_provider: already done
+0064.624 (R) [notice] Search and replacing table: wp_woocommerce_api_keys: already done
+0064.624 (R) [notice] Search and replacing table: wp_woocommerce_attribute_taxonomies: already done
+0064.625 (R) [notice] Search and replacing table: wp_woocommerce_downloadable_product_permissions: already done
+0064.626 (R) [notice] Search and replacing table: wp_woocommerce_exported_csv_items: already done
+0064.627 (R) [notice] Search and replacing table: wp_woocommerce_log: already done
+0064.628 (R) [notice] Search and replacing table: wp_woocommerce_order_itemmeta: already done
+0064.628 (R) [notice] Search and replacing table: wp_woocommerce_order_items: already done
+0064.629 (R) [notice] Search and replacing table: wp_woocommerce_payment_tokenmeta: already done
+0064.630 (R) [notice] Search and replacing table: wp_woocommerce_payment_tokens: already done
+0064.631 (R) [notice] Search and replacing table: wp_woocommerce_sessions: already done
+0064.632 (R) [notice] Search and replacing table: wp_woocommerce_shipping_zone_locations: already done
+0064.633 (R) [notice] Search and replacing table: wp_woocommerce_shipping_zone_methods: already done
+0064.633 (R) [notice] Search and replacing table: wp_woocommerce_shipping_zones: already done
+0064.634 (R) [notice] Search and replacing table: wp_woocommerce_square_customers: already done
+0064.636 (R) [notice] Search and replacing table: wp_woocommerce_tax_rate_locations: already done
+0064.637 (R) [notice] Search and replacing table: wp_woocommerce_tax_rates: already done
+0064.638 (R) [notice] Search and replacing table: wp_wpeditor_settings: already done
+0064.639 (R) [notice] Search and replacing table: wp_wpforms_tasks_meta: already done
+0064.640 (R) [notice] Search and replacing table: wp_wpie_template: already done
+0064.641 (R) [notice] Search and replacing table: wp_wt_iew_action_history: already done
+0064.642 (R) [notice] Search and replacing table: wp_wt_iew_cron: already done
+0064.643 (R) [notice] Search and replacing table: wp_wt_iew_ftp: already done
+0064.644 (R) [notice] Search and replacing table: wp_wt_iew_mapping_template: already done
+0064.645 (R) [notice] Search and replacing table: wp_yoast_indexable: already done
+0064.646 (R) [notice] Search and replacing table: wp_yoast_indexable_hierarchy: already done
+0064.646 (R) [notice] Search and replacing table: wp_yoast_migrations: already done
+0064.648 (R) [notice] Search and replacing table: wp_yoast_primary_term: already done
+0064.649 (R) [notice] Search and replacing table: wp_yoast_seo_links: already done
+0064.650 (R) [notice] Tables examined: 136
+0064.650 (R) [notice] Rows examined: 181405
+0064.652 (R) [notice] Changes made: 25991
+0064.653 (R) [notice] SQL update commands run: 25832
+0064.654 (R) [notice] Errors: 0
+0064.655 (R) [notice] Time taken (seconds): 43.221
+0065.019 (R) [notice] Restore successful!

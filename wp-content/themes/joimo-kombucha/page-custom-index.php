@@ -19,14 +19,259 @@ get_header("v2");
 			'text' => get_field('full_background_hero')['text'],
 			'button_url' => get_field('full_background_hero')['button']['url'],
 			'button_title' => get_field('full_background_hero')['button']['title'],
-		])
+		]);
+
+		$product_slider_group = get_field('product_slider');
+		$product_slider_title = $product_slider_group['title'] ?? null;
+		$product_slider_all_link = $product_slider_group['view_all_link'] ?? null;
+		$product_slider_products = $product_slider_group['products_category'] ?? null;
+		get_template_part('sections/nt-big-product-slider', null, [
+			'title' => $product_slider_title,
+			'all_link' => $product_slider_all_link,
+			'products' => $product_slider_products
+		]);
 	?>
 
-	<div id="top_hero_section" class="hero-box container-fluid"> <!-- Container for page title and hero -->		
-		
+<style>
+	.inset {
+  background: #ededeb;
+}
+.inset__title {
+  margin: 0 28%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 0 60px 0;
+  color: #221e1f;
+}
+.inset__title img {
+  margin-bottom: 40px;
+}
+.inset__title h3 {
+  font-family: Noe Display;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.inset__title p {
+  font-family: Cera Pro;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+}
+.inset__wrapper {
+  display: flex;
+}
+.inset__wrapper_section {
+  margin-top: 150px;
+}
+.inset__wrapper_sectionimg {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 800px;
+  width: 700px;
+}
+.inset__wrapper_sectionimg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  left: 8%;
+  top: 0;
+}
+.inset__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inset__section h4 {
+  margin: 20px 0 5px 0;
+  color: #2a4934;
+  font-family: Noe Display;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: bottom;
+}
+.inset__section p {
+  color: #7c7c7c;
+  font-family: Cera Pro;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0;
+  margin-bottom: 50px;
+}
+.Ingredients {
+  margin-top: 100px;
+}
+.Ingredients__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.Ingredients__title h2 {
+  color: #221e1f;
+  font-family: Noe Display;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.Ingredients__content {
+  display: flex;
+  width: 100%;
+}
+.Ingredients__content_img {
+  position: relative;
+  width: 100%;
+  height: 740px;
+}
+.Ingredients__content_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+}
+.Ingredients__content_img-title {
+  position: absolute;
+  top: 78%;
+  left: 0;
+  padding: 0 40px 40px 40px;
+  z-index: 2;
+}
+.Ingredients__content_img-title h3 {
+  margin-right: 15%;
+  font-family: Noe Display;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+.Ingredients__content_img-title p {
+  font-family: Cera Pro;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: #7c7c7c;
+}
+</style>
+<section class="inset">
+    <div class="inset__title">
+        <img src="<?= get_template_directory_uri() ?>/img/j-title.webp" alt="image">
+        <h3>Sip the Difference</h3>
+        <p>Our kombucha blends rich heritage with a refreshing, sophisticated taste. A delicate oolong base adds complexity, crafted for those who value quality and flavor.</p>
+    </div>
+    <div class="container">
+        <div class="inset__wrapper">
+            <div class="inset__wrapper_section">
+
+                <div class="inset__section">
+                    <img src="<?= get_template_directory_uri() ?>/img/j-1.webp" alt="image">
+                    <h4>Refreshing Kombucha Taste</h4>
+                    <p>Refreshing Kombucha Taste</p>
+                </div>
+
+                <div class="inset__section">
+                    <img src="<?= get_template_directory_uri() ?>/img/j-2.webp" alt="image">
+                    <h4>Full Of Raw And Crafted Probiotics</h4>
+                    <p>Infused with nature’s finest,crafted to nurture your whole self.</p>
+                </div>
+
+                <div class="inset__section">
+                    <img src="<?= get_template_directory_uri() ?>/img/j-3.webp" alt="image">
+                    <h4>Made With Real Fruit</h4>
+                    <p>Fresh fruit flavor with every sip.</p>
+                </div>
+
+            </div>
+
+            <div class="inset__wrapper_sectionI">
+                <div class="inset__wrapper_sectionimg">
+                    <img src="<?= get_template_directory_uri() ?>/img/but.webp" alt="image">
+                </div>
+            </div>
+
+            <div class="inset__wrapper_section">
+
+                <div class="inset__section">
+                    <img src="<?= get_template_directory_uri() ?>/img/j-4.webp" alt="image">
+                    <h4>Delightfully Crisp &amp; Fizzy</h4>
+                    <p>An effervescent joy that's asmart alternative to soda</p>
+                </div>
+
+                <div class="inset__section">
+                    <img src="<?= get_template_directory_uri() ?>/img/j-5.webp" alt="image">
+                    <h4>Made From The Best Oolong Tea</h4>
+                    <p>Sourced from the high mountains of Taiwan,home of the world’s best oolong leaves.</p>
+                </div>
+
+                <div class="inset__section">
+                    <img src="<?= get_template_directory_uri() ?>/img/j-6.webp" alt="image">
+                    <h4>Meticulously Brewed for Quality</h4>
+                    <p>A testament to our commitment
+                        to perfection in every bottle.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="Ingredients">
+    <div class="Ingredients__title">
+        <h2>Ingredients.</h2>
+    </div>
+    <div class="Ingredients__content">
+        <div class="Ingredients__content_img">
+            <img src="<?= get_template_directory_uri() ?>/img/ingr1.webp" alt="image">
+            <div class="Ingredients__content_img-title">
+                <h3>True Oolong, Mountain Grown, Masterfully Crafted</h3>
+                <p>Sourced from Taiwan’s high mountains, our rare oolong is cultivated by award-winning tea masters.</p>
+            </div>
+        </div>
+
+        <div class="Ingredients__content_img">
+            <img src="<?= get_template_directory_uri() ?>/img/ingr2.webp" alt="image">
+            <div class="Ingredients__content_img-title">
+                <h3>Real Fruit, Peak-Ripened, Purely Crafted</h3>
+                <p>Made from sun-ripened fruit, pureed or juiced is crafted to preserve vibrant flavor, natural sweetness, and nothing artificial—just real fruit at its best.</p>
+            </div>
+        </div>
+
+        <div class="Ingredients__content_img">
+            <img src="<?= get_template_directory_uri() ?>/img/ingr3.webp" alt="image">
+            <div class="Ingredients__content_img-title">
+                <h3>Organic Cane Sugar, Fuel For The Cultures</h3>
+                <p>Cane sugar is the essential fuel that powers fermentation, feeding the live cultures that bring kombucha to life.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+	<div id="top_hero_section" class="hero-box container-fluid"> <!-- Container for page title and hero -->				
 		<!-- Alternate Block Section -->
 		<div class="hero-row skinny row alternate-block-section">
-			
 			<section class="headline-column col-md-6 col-12">
 			<div class="hero-inner">
 				<h2 class="headline-title">
@@ -46,44 +291,6 @@ get_header("v2");
 			
 		</div>
 		<!-- Alternate Block Section --> 	
-		
-		<!-- Alternate Block Section V2 -->
-		<div class="hero-row skinny row alternate-block-section-v2">
-
-			<section class="hero-column col-md-6 col-12">	            					
-				<img src="<?php the_field('block-image-v2'); ?>">
-			</section>
-			
-			<section class="headline-column col-md-6 col-12">
-				<div class="inner-desc">
-
-					<img src="<?php the_field('group_1_image_1'); ?>">
-
-					<h2 class="headline-title">
-					<?php the_field('group_1_title_1'); ?></h2>
-
-					<p><?php the_field('group_1_subtitle_1'); ?></p>
-				</div>
-				<div class="inner-desc">
-
-					<img src="<?php the_field('group_2_image_2'); ?>">
-
-					<h2 class="headline-title"><?php the_field('group_2_title_2'); ?></h2>
-
-					<p><?php the_field('group_2_subtitle_2'); ?></p>
-				</div>
-				<div class="inner-desc">
-
-					<img src="<?php the_field('group_3_image_3'); ?>">
-
-					<h2 class="headline-title"><?php the_field('group_3_title_3'); ?></h2>
-
-					<p><?php the_field('group_3_subtitle_3'); ?></p>
-				</div>	
-			</section>
-			
-		</div>
-		<!-- Alternate Block Section V2 -->
 		
 		<!-- Section Title -->
 		<div class="hero-row skinny row section-title-v2">

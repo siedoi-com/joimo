@@ -20,3 +20,4 @@ wp-config.php
 ehthumbs.db
 Thumbs.db
 .vscode/
+node_modules
