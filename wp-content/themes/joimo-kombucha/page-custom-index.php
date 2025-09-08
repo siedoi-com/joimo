@@ -289,6 +289,27 @@ get_header("v2");
     </div>
 </section>
 
+<!-- Alternate Section V4 -->
+<div class="hero-row skinny row alternate-block-section-v4">
+
+<section class="hero-column col-md-6 col-12">	            					
+	<img src="<?php the_field('block-image-4'); ?>">
+</section>
+
+<section class="headline-column headline-column--content col-md-6 col-12">
+	<div class="section-left-inner-container">
+	<h2 class="headline-title"><?php the_field('title_v4'); ?></h2>
+
+	<p><?php the_field('subtitle_v4'); ?></p>
+	<div class="page-link">
+		<a href="<?php the_field('link_v4'); ?>" class="cta-btn btn-white-outline"><?php the_field('text_v4'); ?></a>
+	</div> 
+	</div>
+</section>
+ 
+</div>
+<!-- Alternate Section V4 -->
+
 	<div id="top_hero_section" class="hero-box container-fluid"> <!-- Container for page title and hero -->				
 		<!-- Alternate Block Section -->
 		<div class="hero-row skinny row alternate-block-section">
@@ -322,9 +343,22 @@ get_header("v2");
 		
 		<!-- Split Image Section -->
 		<div class="container-full">
-		<div class="hero-row skinny row split-image-section desktop-split-image-section">
+		<div class="hero-row skinny row split-image-section split-image-section--three desktop-split-image-section">
+
+			<section class="hero-column">	            					
+				<div class="split-image">
+					<img src="<?php the_field('split_group_2_split_image_2'); ?>">
+				</div>
+				
+                <div class="split-content">
+	            	<h2 class="headline-title"><?php the_field('split_group_2_split_title_2'); ?></h2>
+	            <div class="page-link">
+                	<a href="<?php the_field('split_group_2_split_link_2'); ?>" class="cta-btn btn-bg-green"><?php the_field('split_group_2_split_text_2'); ?></a>
+                </div>	
+                </div>
+			</section>
 			
-			<section class="headline-column col-md-6 col-6">
+			<section class="headline-column">
 			    
 				<div class="split-image">
 					<img src="<?php the_field('split_group_1_split_image_1'); ?>">
@@ -343,7 +377,7 @@ get_header("v2");
 				
 			</section>
 				
-			<section class="hero-column col-md-6 col-6">	            					
+			<section class="hero-column">	            					
 				<div class="split-image">
 					<img src="<?php the_field('split_group_2_split_image_2'); ?>">
 				</div>
@@ -421,26 +455,7 @@ get_header("v2");
 		</div>
 		<!-- Alternate Section V3 -->
 		
-		<!-- Alternate Section V4 -->
-		<div class="hero-row skinny row alternate-block-section-v4">
-
-			<section class="hero-column col-md-6 col-12">	            					
-				<img src="<?php the_field('block-image-4'); ?>">
-			</section>
-			
-			<section class="headline-column col-md-6 col-12">
-				<div class="section-left-inner-container">
-			    <h2 class="headline-title"><?php the_field('title_v4'); ?></h2>
-
-                <p><?php the_field('subtitle_v4'); ?></p>
-                <div class="page-link">
-                	<a href="<?php the_field('link_v4'); ?>" class="cta-btn btn-white-outline"><?php the_field('text_v4'); ?></a>
-                </div> 
-				</div>
-			</section>
-			 
-		</div>
-		<!-- Alternate Section V4 -->
+		
 		
 		<!-- Instagram -->
 		<div class="instagram-section">
