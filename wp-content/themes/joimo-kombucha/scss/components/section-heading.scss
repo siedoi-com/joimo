@@ -1,0 +1,24 @@
+.nt-section-heading {
+
+}
+// End inner
+
+.nt-section-heading--type {
+    &_view-all {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        justify-content: space-between;
+
+        .nt-section-heading {
+            &__view-all-wr {
+                margin-inline-start: auto;
+                width: min-content;
+                white-space: nowrap;
+            }
+        }
+        // End inner
+    }
+    // End VIEW ALL
+}
+// End by TYPE

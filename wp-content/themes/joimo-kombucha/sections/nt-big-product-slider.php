@@ -22,10 +22,10 @@
 <section class="nt-big-product-slider">
     <div class="new-container">
         <?php if ($title): ?>
-            <div class="nt-section-heading nt-section-heading--type_view-all">
+            <div class="nt-big-product-slider__hading nt-section-heading nt-section-heading--type_view-all">
                 <div class="nt-section-heading__view-all-wr"></div>
                 <!-- /.nt-section-heading__view-all-wr -->
-                <h2 class="nt-section-heading__title "><?= $title ?></h2>
+                <h2 class="nt-section-heading__title text--h2"><?= $title ?></h2>
                 <!-- /.nt-section-heading__title -->
                 <?php if ($all_link): ?>
                     <div class="nt-section-heading__view-all-wr">
@@ -45,10 +45,26 @@
                             <?php
                                 while ($products_query->have_posts()):
                                     $products_query->the_post();
+                                    $product_id = get_the_ID();
+
+                                    $regular_price = null;
+                                    $product = wc_get_product( $product_id );
                             ?>
                                 <li class="splide__slide">
                                     <a href="<?= get_the_permalink() ?>" class="nt-big-product">
-                                        <?= get_the_title() ?>
+                                        <div class="nt-big-product__img-wr">
+                                            <picture>
+                                                <img src="<?= get_the_post_thumbnail_url($product_id, 'full') ?>" alt="<?= get_the_title() ?>" class="nt-big-product__img" loading="lazy">
+                                            </picture>
+                                        </div>
+                                        <!-- /.nt-big-product__img-wr -->
+
+                                        <div class="nt-big-product__content-wr">
+                                            <h4 class="nt-big-product__title"><?= get_the_title() ?></h4>
+                                            <div class="nt-big-product__desc"><?= the_excerpt(); ?></div>
+                                            <div class="nt-big-product__price price price--size_def price--type_regular"><?= $product->get_price() ?></div>
+                                        </div>
+                                        <!-- /.nt-big-product__content-wr -->
                                     </a>
                                     <!-- /.nt-big-product -->
                                 </li>

@@ -4454,7 +4454,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
   if (document.querySelector('.nt-big-product-slider__slider')) {
     Array.from(document.querySelectorAll('.nt-big-product-slider__slider')).map(productSlider => {
       const sliderProduct = new Splide(productSlider, {
-        type: 'loop',
         perPage: 3,
         pagination: false,
         arrows: false,
