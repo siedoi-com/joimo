@@ -175,6 +175,26 @@ get_header("v2");
   letter-spacing: 0;
   color: #7c7c7c;
 }
+@media screen and (max-width: 992px) {
+.inset__wrapper_section {
+    margin-top: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .inset__wrapper_sectionI {
+    display: none;
+  }
+  .Ingredients__content {
+    flex-direction: column;
+  }
+  .Ingredients__content_img {
+    height: 440px;
+  }
+  .Ingredients__content_img-title {
+    top: 68%;
+  }
+}
 </style>
 <section class="inset">
     <div class="inset__title">
