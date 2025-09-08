@@ -1,0 +1,20 @@
+.product-kombucha {
+    &__gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.4rem;
+    }
+
+    &__img:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    &__img {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+// End inner
