@@ -3365,7 +3365,9 @@ width:49%;
 width:49%;
 float: right;
 }
-
+.farm-img img {
+    width: 100%;
+}
 .col-right p{
 	max-width: 556px;
 }
