@@ -30,27 +30,52 @@ if ( post_password_required() ) {
 	echo get_the_password_form(); // WPCS: XSS ok.
 	return;
 }
+
+
+// Get the ID of the main product image (the "featured image").
+$main_image_id = $product->get_image_id();
+
+// Get an array of IDs for the gallery images.
+$gallery_image_ids = $product->get_gallery_image_ids();
+
+// Create a single array of all image IDs to loop through.
+// We add the main image to the start of the gallery array.
+$all_image_ids = $gallery_image_ids;
+if ( $main_image_id ) {
+    array_unshift( $all_image_ids, $main_image_id );
+}
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?> style="position: relative;">
+
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'product-kombucha', $product ); ?> style="position: relative;">
 
 	<?php get_template_part( 'template-parts/shop', 'alert' ) ?>
+    
+    <?php if ( ! empty( $all_image_ids ) ):?>
+    <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images images product-kombucha__gallery">
+        <?php 
+             // Loop through each image ID.
+            foreach ( $all_image_ids as $attachment_id ) {
+                
+                // Use WordPress's best function to generate a full, responsive <img> tag.
+                // This automatically includes 'srcset' and 'sizes' for different screen sizes.
+                $image_tag = wp_get_attachment_image(
+                    $attachment_id,
+                    'woocommerce_single', // The appropriate image size for a single product page.
+                    false, // Don't show an icon fallback.
+                    [ 'class' => '' ] // Optional: add a class to the <img> tag itself.
+                );
 
-    <div class="hero__wrapper_img">
-        <div class="image-first">
-            <img src="<?= get_template_directory_uri() ?>/img/butle.webp" alt="image">
-            <img src="<?= get_template_directory_uri() ?>/img/hero-2.webp" alt="image">
-        </div>
-        <div class="image-second">
-            <img class="image-second_primary" src="<?= get_template_directory_uri() ?>/img/hero-3.webp" alt="image">
-            <img class="image-second_bg" src="<?= get_template_directory_uri() ?>/img/Image_6.webp" alt="image">
-        </div>
-        <div class="image-third">
-            <img src="<?= get_template_directory_uri() ?>/img/Image_4.webp" alt="image">
-            <img src="<?= get_template_directory_uri() ?>/img/Image_5.webp" alt="image">
-        </div>
+                // Wrap the generated <img> tag in your custom div structure.
+                echo '<div class="product-kombucha__img">';
+                echo $image_tag;
+                echo '</div>';
+
+            }
+        ?>
     </div>
+    <?php endif;?>
 
-	<div class="summary entry-summary">
+	<div class="summary entry-summary product-kombucha__summary">
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
@@ -66,6 +91,33 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_single_product_summary' );
 		?>
+
+        <?php if (get_field('accordions')):?>
+            <div class="product-kombucha__acc">
+                <?php if (get_field('accordions')['tasting_notes']):?>
+                    <div class="faq product-kombucha__faq">
+                        <div class="faq__heading">
+                            <span>Tasting Notes</span>
+                            <button type="button" class="faq__btn"></button>
+                        </div>
+                        <div class="faq__content">
+                            <?= get_field('accordions')['tasting_notes'] ?>
+                        </div>
+                    </div>
+                <?php endif;?>
+                <?php if (get_field('accordions')['shelf_life_&_storage_instructions']):?>
+                    <div class="faq product-kombucha__faq">
+                        <div class="faq__heading">
+                            <span>Shelf Life & Storage Instructions</span>
+                            <button type="button" class="faq__btn"></button>
+                        </div>
+                        <div class="faq__content">
+                            <?= get_field('accordions')['shelf_life_&_storage_instructions'] ?>
+                        </div>
+                    </div>
+                <?php endif;?>
+            </div>
+        <?php endif;?>
 	</div>
 
 	<?php
