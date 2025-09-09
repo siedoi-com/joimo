@@ -4493,5 +4493,6 @@ document.addEventListener( 'DOMContentLoaded', function() {
       sliderProduct.mount();
     });
   }
-  // End product slider
+
+
 } );

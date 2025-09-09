@@ -1,0 +1,38 @@
+.nt-shop-headline {
+    padding-block: 4.6rem;
+
+    &__title {
+        margin-block-end: 5.2rem;
+        text-align: center;
+        color: #221E1F;
+    }
+
+    &__filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .625rem;
+        flex-wrap: wrap;
+    }
+
+    &__btn {
+        border: .1rem solid #2A4934;
+        font-size: 1.5rem;
+        padding: .4em .8em;
+        letter-spacing: -0.03px;
+        line-height: 120%;
+        font-weight: 500;
+        transition: all .3s ease-in-out;
+        font-family: 'Cera Pro', sans-serif;
+
+        &:focus, &.focus {
+            box-shadow: none;
+        }
+
+        &:hover, &:focus, &.active {
+            color: #fff;
+            background-color: #2A4934;
+        }
+    }
+}
+// End inner

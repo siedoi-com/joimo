@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-family: 'Cera Pro', sans-serif;
 
     &__img-wr {
         position: relative;
@@ -45,6 +46,7 @@
     &__title {
         color: var(--color_ink);
         font-size: 2.2rem;
+        font-family: 'NoeDisplay-RegularV2';
         font-weight: 500;
     }
 
@@ -56,6 +58,10 @@
         line-height: 120%;
         font-weight: 500;
         color: var(--color_gray);
+
+        .strong-text {
+            font-weight: inherit;
+        }
     }
 
     &__price {
