@@ -12,83 +12,130 @@
 get_header();
 ?>
 
-  <section class="hero-column col-md-12 col-12 shop-hero-section">
-		<div class="hero-row skinny row">
-			
-			<div class="headline-block col-md-12 col-12">
-			
-				<?php the_field('shop_headline'); ?>
-				
-			</div>
-    </div>
-    <?php if( get_field('shop_hero_desktop_banner') ): ?>    
-		<div class="hero-desktop-image-block">                
-				<img src="<?php the_field('shop_hero_desktop_banner'); ?>" alt="Hero Shop Banner">
-		</div>
-    <?php endif; ?>    
-
-    <?php if( get_field('shop_hero_mobile_banner') ): ?>    
-		<div class="hero-mobile-image-block">                
-				<img src="<?php the_field('shop_hero_mobile_banner'); ?>" alt="Hero Shop Banner">
-		</div>
-    <?php endif; ?>      
-	
-  </section>	
-<!-- Ends container for page title hero -->
-
-
-<?php if ($post->ID == '53' && get_field('show_filters_shop_tea', 40)): ?>
-	<div class="content-area container-filter">	
-			<?= do_shortcode('[searchandfilter id="wpf_627919322ad3a"]') ?>
-			<?php
-				
-				if ( ! is_active_sidebar( 'shop-pro-filter' ) ) {
-					return;
-				}
-
-			?>  
-
-			<?php dynamic_sidebar( 'shop-pro-filter' ); ?>				
-
-			<span class="filter_mob_close_button">				
-				<svg class="filter_mob__close_icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M7.63259 8.81101L23.1889 24.3674" stroke="#2A4934" stroke-width="1.5" stroke-linecap="round"/>
-				<path d="M23.896 8.33962L8.33967 23.896" stroke="#2A4934" stroke-width="1.5" stroke-linecap="round"/>
-				</svg>
-			</span>
-
-			<div class="container-filter__controls">
-				<button class="container-filter__clear-btn">clear</button>
-				<button class="container-filter__apply-btn">apply</button>
-			</div>
-	</div>
-<?php endif; ?>
-
-
-	<div class="content-area container-fluid">
-	
-	<main id="primary" class="site-main skinny row" role="main">
-	
-		<section class="content-column col-md-12"> <!-- Content Column -->
+	<section class="nt-shop-section">
+		<div class="new-container">
+			<div class="nt-shop-section__hading nt-section-heading">
+                <h2 class="nt-section-heading__title text--h2">Kombucha</h2>
+            </div>
+            <!-- /.nt-section-heading -->
 
 			<?php
-			while ( have_posts() ) :
-				the_post();
-
-				get_template_part( 'template-parts/content', 'page-sb' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-
-			endwhile; // End of the loop.
+				$args = array(
+					'post_type'      => 'product',
+					'posts_per_page' => -1,
+					'tax_query'      => array(
+						array(
+							'taxonomy' => 'product_cat',
+							'field'    => 'term_id',
+							'terms'    => 160,
+						),
+					),
+				);
+			
+				$products_query = new WP_Query($args);
 			?>
 
-		</section> <!-- Ends Content Column -->
-	
-	</main><!-- #main -->
-	
-	</div> <!-- Content Area -->
+			<?php if ($products_query->have_posts()): ?>
+				<div class="nt-shop-section__products-wr">
+					<?php
+						while ($products_query->have_posts()):
+							$products_query->the_post();
+							$product_id = get_the_ID();
+					?>
+						<?php get_template_part('blocks/big-product', null, [
+							'product_id' => $product_id
+						]) ?>
+					<?php endwhile ?>
+				</div>
+				<!-- /.nt-shop-section__products-wr -->
+			<?php endif; wp_reset_postdata(); ?>
+		</div>
+		<!-- /.new-container -->
+	</section>
+	<!-- /.shop-section -->
+
+	<section class="nt-shop-section">
+		<div class="new-container">
+			<div class="nt-shop-section__hading nt-section-heading">
+                <h2 class="nt-section-heading__title text--h2">Oolong Tea</h2>
+            </div>
+            <!-- /.nt-section-heading -->
+
+			<?php
+				$args = array(
+					'post_type'      => 'product',
+					'posts_per_page' => -1,
+					'tax_query'      => array(
+						array(
+							'taxonomy' => 'product_cat',
+							'field'    => 'term_id',
+							'terms'    => 21,
+						),
+					),
+				);
+			
+				$products_query = new WP_Query($args);
+			?>
+
+			<?php if ($products_query->have_posts()): ?>
+				<div class="nt-shop-section__products-wr">
+					<?php
+						while ($products_query->have_posts()):
+							$products_query->the_post();
+							$product_id = get_the_ID();
+					?>
+						<?php get_template_part('blocks/big-product', null, [
+							'product_id' => $product_id
+						]) ?>
+					<?php endwhile ?>
+				</div>
+				<!-- /.nt-shop-section__products-wr -->
+			<?php endif; wp_reset_postdata(); ?>
+		</div>
+		<!-- /.new-container -->
+	</section>
+	<!-- /.shop-section -->
+
+	<section class="nt-shop-section">
+		<div class="new-container">
+			<div class="nt-shop-section__hading nt-section-heading">
+                <h2 class="nt-section-heading__title text--h2">Home and Teaware</h2>
+            </div>
+            <!-- /.nt-section-heading -->
+
+			<?php
+				$args = array(
+					'post_type'      => 'product',
+					'posts_per_page' => -1,
+					'tax_query'      => array(
+						array(
+							'taxonomy' => 'product_cat',
+							'field'    => 'term_id',
+							'terms'    => 34,
+						),
+					),
+				);
+			
+				$products_query = new WP_Query($args);
+			?>
+
+			<?php if ($products_query->have_posts()): ?>
+				<div class="nt-shop-section__products-wr">
+					<?php
+						while ($products_query->have_posts()):
+							$products_query->the_post();
+							$product_id = get_the_ID();
+					?>
+						<?php get_template_part('blocks/big-product', null, [
+							'product_id' => $product_id
+						]) ?>
+					<?php endwhile ?>
+				</div>
+				<!-- /.nt-shop-section__products-wr -->
+			<?php endif; wp_reset_postdata(); ?>
+		</div>
+		<!-- /.new-container -->
+	</section>
+	<!-- /.shop-section -->
 
 <?php get_footer(); ?>
