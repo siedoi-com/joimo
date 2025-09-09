@@ -120,6 +120,8 @@ get_header("v2");
 }
 .Ingredients {
   margin-top: 100px;
+  padding-bottom: 8rem;
+    border-bottom: .1rem solid #EDEDEB;
 }
 .Ingredients__title {
   margin-bottom: 30px;
@@ -289,6 +291,27 @@ get_header("v2");
     </div>
 </section>
 
+<!-- Alternate Section V4 -->
+<div class="hero-row skinny row alternate-block-section-v4">
+
+<section class="hero-column col-md-6 col-12">	            					
+	<img src="<?php the_field('block-image-4'); ?>">
+</section>
+
+<section class="headline-column headline-column--content col-md-6 col-12">
+	<div class="section-left-inner-container">
+	<h2 class="headline-title"><?php the_field('title_v4'); ?></h2>
+
+	<p><?php the_field('subtitle_v4'); ?></p>
+	<div class="page-link">
+		<a href="<?php the_field('link_v4'); ?>" class="cta-btn btn-white-outline"><?php the_field('text_v4'); ?></a>
+	</div> 
+	</div>
+</section>
+ 
+</div>
+<!-- Alternate Section V4 -->
+
 	<div id="top_hero_section" class="hero-box container-fluid"> <!-- Container for page title and hero -->				
 		<!-- Alternate Block Section -->
 		<div class="hero-row skinny row alternate-block-section">
@@ -312,93 +335,6 @@ get_header("v2");
 		</div>
 		<!-- Alternate Block Section --> 	
 		
-		<!-- Section Title -->
-		<div class="hero-row skinny row section-title-v2">
-			<section class="hero-column col-md-12 col-12">
-				<h2 class="headline-title"><?php the_field('section_title'); ?></h2>
-			</section>
-		</div>
-		<!-- Section Title -->		
-		
-		<!-- Split Image Section -->
-		<div class="container-full">
-		<div class="hero-row skinny row split-image-section desktop-split-image-section">
-			
-			<section class="headline-column col-md-6 col-6">
-			    
-				<div class="split-image">
-					<img src="<?php the_field('split_group_1_split_image_1'); ?>">
-				</div>
-
-				<div class="split-content">
-			    <h2 class="headline-title"><?php the_field('split_group_1_split_title_1'); ?></h2>
-
-                <div class="page-link">
-                	<a href="<?php the_field('split_group_1_split_link_1'); ?>" class="cta-btn btn-bg-green"><?php the_field('split_group_1_split_text_1'); ?></a>
-                </div>
-            	</div>
-
-                <!-- <div class="headline-title"></div> -->
-                <!-- <div class="page-link"></div> -->
-				
-			</section>
-				
-			<section class="hero-column col-md-6 col-6">	            					
-				<div class="split-image">
-					<img src="<?php the_field('split_group_2_split_image_2'); ?>">
-				</div>
-				
-                <div class="split-content">
-	            	<h2 class="headline-title"><?php the_field('split_group_2_split_title_2'); ?></h2>
-	            <div class="page-link">
-                	<a href="<?php the_field('split_group_2_split_link_2'); ?>" class="cta-btn btn-bg-green"><?php the_field('split_group_2_split_text_2'); ?></a>
-                </div>	
-                </div>
-			</section>
-			
-		</div>
-		</div>
-		<!-- Split Image Section -->
-		
-		<!-- Split Image Section Mobile -->
-		<div class="container-full">
-		<div class="hero-row skinny row split-image-section mobile-split-image-section">
-			
-			<section class="headline-column col-md-6 col-6">
-			    
-				<div class="split-image">
-					<img src="<?php the_field('mobile_split_group_1_mobile_split_image_1'); ?>">
-				</div>
-
-				<div class="split-content">
-			    <h2 class="headline-title"><?php the_field('mobile_split_group_1_mobile_split_title_1'); ?></h2>
-
-                <div class="page-link">
-                	<a href="<?php the_field('mobile_split_group_1_mobile_split_link_1'); ?>" class="cta-btn btn-bg-green"><?php the_field('mobile_split_group_1_mobile_split_text_1'); ?></a>
-                </div>
-            	</div>
-
-                <!-- <div class="headline-title"></div> -->
-                <!-- <div class="page-link"></div> -->
-				
-			</section>
-				
-			<section class="hero-column col-md-6 col-6">	            					
-				<div class="split-image">
-					<img src="<?php the_field('mobile_split_group_2_mobile_split_image_2'); ?>">
-				</div>
-				
-                <div class="split-content">
-	            	<h2 class="headline-title"><?php the_field('mobile_split_group_2_mobile_split_title_2'); ?></h2>
-	            <div class="page-link">
-                	<a href="<?php the_field('mobile_split_group_2_mobile_split_link_2'); ?>" class="cta-btn btn-bg-green"><?php the_field('mobile_split_group_2_mobile_split_text_2'); ?></a>
-                </div>	
-                </div>
-			</section>
-			
-		</div>
-		</div>
-		<!-- Split Image Section Mobile -->
 		
 		<!-- Alternate Section V3 -->
 		<div class="hero-row skinny row alternate-block-section-v3">
@@ -420,34 +356,82 @@ get_header("v2");
 			 
 		</div>
 		<!-- Alternate Section V3 -->
-		
-		<!-- Alternate Section V4 -->
-		<div class="hero-row skinny row alternate-block-section-v4">
 
-			<section class="hero-column col-md-6 col-12">	            					
-				<img src="<?php the_field('block-image-4'); ?>">
+		<div class="hero-row skinny row section-title-v2">
+			<section class="hero-column col-md-12 col-12">
+				<h2 class="headline-title">Shop Pure. Joy.</h2>
 			</section>
-			
-			<section class="headline-column col-md-6 col-12">
-				<div class="section-left-inner-container">
-			    <h2 class="headline-title"><?php the_field('title_v4'); ?></h2>
-
-                <p><?php the_field('subtitle_v4'); ?></p>
-                <div class="page-link">
-                	<a href="<?php the_field('link_v4'); ?>" class="cta-btn btn-white-outline"><?php the_field('text_v4'); ?></a>
-                </div> 
-				</div>
-			</section>
-			 
 		</div>
-		<!-- Alternate Section V4 -->
+
+		<!-- Split 3 Column Image Section : Start -->
+		<div class="container-full-width hero-3-column-image-section">
+				<div class="hero-row skinny row split-image-section desktop-split-image-section">
+					
+					<section class="headline-column col-md-4 col-4">
+						
+						<div class="split-image">
+							<picture>
+								<img class="desktop_img_block" src="<?php the_field('split_3_column_group_1_split_image'); ?>">
+								<!-- <img class="mobile_img_block" src="< the_field('split_3_column_group_1_split_image_mobile'); ?>"> -->
+							</picture>
+						</div>
+
+						<div class="split-content">						
+
+							<div class="page-link">
+								<a href="<?php the_field('split_3_column_group_1_split_link'); ?>" class="cta-btn btn-bg-green"><?php the_field('split_3_column_group_1_split_text'); ?></a>
+							</div>
+						</div>
+						
+					</section>
+						
+					<section class="hero-column col-md-4 col-4">	            					
+						<div class="split-image">
+							<picture>
+								<img class="desktop_img_block" src="<?php the_field('split_3_column_group_2_split_image'); ?>">
+								<!-- <img class="mobile_img_block" src="< the_field('split_3_column_group_2_split_image_mobile'); ?>"> -->
+							</picture>
+						</div>
+						
+						<div class="split-content">							
+						<div class="page-link">
+							<a href="<?php the_field('split_3_column_group_2_split_link'); ?>" class="cta-btn btn-bg-green"><?php the_field('split_3_column_group_2_split_text'); ?></a>
+						</div>	
+						</div>
+					</section>
+
+					<section class="headline-column col-md-4 col-4">
+						
+						<div class="split-image">
+							<picture>
+								<img class="desktop_img_block" src="<?php the_field('split_3_column_group_3_split_image'); ?>">
+								<!-- <img class="mobile_img_block" src="< the_field('split_3_column_group_3_split_image_mobile'); ?>"> -->
+							</picture>
+						</div>
+
+						<div class="split-content">						
+
+							<div class="page-link">
+								<a href="<?php the_field('split_3_column_group_3_split_link'); ?>" class="cta-btn btn-bg-green"><?php the_field('split_3_column_group_3_split_text'); ?></a>
+							</div>
+						</div>
+						
+					</section>					
+
+					
+				</div>
+		</div>
+		<!-- Split 3 Column Image Section : End -->	
+		
 		
 		<!-- Instagram -->
 		<div class="instagram-section">
 				<div class="container-full">
 				<h2>Follow us  <span>@joimotea</span></h2>
-				
-				</div>
+			</div>
+			<div class="instagram-section__posts">
+				<?= do_shortcode( '[instagram-feed feed=1]' ) ?>
+			</div>
 		</div>
 		<!-- Instagram -->
 		
