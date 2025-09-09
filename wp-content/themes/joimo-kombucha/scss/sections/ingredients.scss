@@ -1,0 +1,112 @@
+.Ingredients {
+  margin-top: 100px;
+}
+.Ingredients__title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.Ingredients__title h2 {
+  color: #221e1f;
+  font-family: Noe Display;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+.Ingredients__content {
+  display: flex;
+  width: 100%;
+}
+.Ingredients__content_img {
+  position: relative;
+  width: 100%;
+  height: 740px;
+}
+.Ingredients__content_img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+}
+.Ingredients__content_img-title {
+  position: absolute;
+  top: 78%;
+  left: 0;
+  padding: 0 40px 40px 40px;
+  z-index: 2;
+}
+.Ingredients__content_img-title h3 {
+  margin-right: 15%;
+  font-family: Noe Display;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-bottom: 20px;
+}
+.Ingredients__content_img-title p {
+  font-family: Cera Pro;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: #7c7c7c;
+}
+
+.ingredients {
+    &__btn {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        color: #221E1F;
+        text-decoration: underline;
+        outline: none;
+        font-size: 1.8rem;
+        font-family: 'Cera Pro', sans-serif;
+        font-weight: 400;
+        gap: .5rem;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all .3s ease-in-out;
+        box-shadow: none;
+        
+        svg {
+            stroke: #221E1F;
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        &:hover, &:focus {
+            color: #2A4934;
+            svg {
+                stroke: #2A4934;
+            }
+        }
+    }
+
+    &__heading {
+        display: flex;
+        justify-content:center;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+  .Ingredients__content {
+    flex-direction: column;
+  }
+  .Ingredients__content_img {
+    height: 440px;
+  }
+  .Ingredients__content_img-title {
+    top: 68%;
+  }
+}

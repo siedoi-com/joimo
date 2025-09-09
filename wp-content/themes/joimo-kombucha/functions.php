@@ -279,6 +279,7 @@ function joimo_kombucha_scripts()
         wp_enqueue_style( 'styles-product-combucha', get_template_directory_uri() . '/css/styles-combucha.css', array());
         wp_enqueue_style( 'styles-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
 		wp_enqueue_script('script-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array('jquery'), _S_VERSION, true);
+        wp_enqueue_script('page-product-kombucha', get_template_directory_uri() . '/js/kombucha-product.js', array(), _S_VERSION, true);
     }
 
     if (is_page_template('page-shop.php')) {

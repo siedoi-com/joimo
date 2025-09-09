@@ -76,18 +76,16 @@ get_header();
 
 
 <?php
-			while (have_posts()) :
-				the_post();
+	while (have_posts()) :
+		the_post();
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if (comments_open() || get_comments_number()) :
-					comments_template();
-				endif;
+		// If comments are open or we have at least one comment, load up the comment template.
+		if (comments_open() || get_comments_number()) :
+			comments_template();
+		endif;
 
-			endwhile; // End of the loop.
-			?>
-
-<?php get_footer(); ?>
+	endwhile; // End of the loop.
+	?>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script>\
 function getWidth() {
@@ -106,3 +104,5 @@ function getWidth() {
     });
   }
 </script>
+
+<?php get_footer(); ?>

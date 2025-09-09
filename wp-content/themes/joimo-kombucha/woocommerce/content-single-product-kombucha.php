@@ -89,8 +89,37 @@ if ( $main_image_id ) {
 		 * @hooked woocommerce_template_single_sharing - 50
 		 * @hooked WC_Structured_Data::generate_product_data() - 60
 		 */
-		do_action( 'woocommerce_single_product_summary' );
+		// do_action( 'woocommerce_single_product_summary' );
+    	$custom_field_label = get_post_meta($product->get_id(), 'custom_product_label', true);
+
+        ?>
+        <div class="product-kombucha__upper-heading">
+            <?php if (!empty($custom_field_label)):?>
+                <span class="pro-label"><?= $custom_field_label ?></span>
+            <?php endif;?>
+            <?php if (get_field('warning_before_title')):?>
+                <span class="product-kombucha__warning"><?= get_field('warning_before_title') ?></span>
+            <?php endif;?>
+        </div>
+
+        <?php woocommerce_template_single_title();
+        woocommerce_template_single_rating();
+        woocommerce_template_single_price();
+        
 		?>
+
+        <div class="product-kombucha__descr">
+            <?= get_the_content() ?>
+            <?php if (get_field('custom_product_additional_information')):?>
+                <div class="custom-product-additional-details">
+                    <?= get_field('custom_product_additional_information') ?>
+                </div>
+            <?php endif;?>
+        </div>
+
+        <div class="product-kombucha__add-to-cart">
+            <?php woocommerce_template_single_add_to_cart(); ?>
+        </div>
 
         <?php if (get_field('accordions')):?>
             <div class="product-kombucha__acc">

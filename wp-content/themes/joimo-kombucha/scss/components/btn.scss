@@ -34,3 +34,7 @@
     // End inner
 }
 // End L
+
+button:focus, button.focus {
+    outline: none;
+}

@@ -1,147 +1,5 @@
-<style>
-	.inset {
-  background: #ededeb;
-}
-.inset__title {
-  margin: 0 28%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 80px 0 60px 0;
-  color: #221e1f;
-}
-.inset__title img {
-  margin-bottom: 40px;
-}
-.inset__title h3 {
-  font-family: Noe Display;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 48px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-align: center;
-  margin-bottom: 15px;
-}
-.inset__title p {
-  font-family: Cera Pro;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-align: center;
-}
-.inset__wrapper {
-  display: flex;
-}
-.inset__wrapper_section {
-  margin-top: 150px;
-}
-.inset__wrapper_sectionimg {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  height: 800px;
-  width: 700px;
-}
-.inset__wrapper_sectionimg img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  position: absolute;
-  left: 8%;
-  top: 0;
-}
-.inset__section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-.inset__section h4 {
-  margin: 20px 0 5px 0;
-  color: #2a4934;
-  font-family: Noe Display;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 100%;
-  letter-spacing: 0;
-  vertical-align: bottom;
-}
-.inset__section p {
-  color: #7c7c7c;
-  font-family: Cera Pro;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 14px;
-  line-height: 120%;
-  letter-spacing: 0;
-  margin-bottom: 50px;
-}
-.Ingredients {
-  margin-top: 100px;
-}
-.Ingredients__title {
-  margin-bottom: 30px;
-  text-align: center;
-}
-.Ingredients__title h2 {
-  color: #221e1f;
-  font-family: Noe Display;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 48px;
-  line-height: 100%;
-  letter-spacing: 0;
-}
-.Ingredients__content {
-  display: flex;
-  width: 100%;
-}
-.Ingredients__content_img {
-  position: relative;
-  width: 100%;
-  height: 740px;
-}
-.Ingredients__content_img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  position: absolute;
-}
-.Ingredients__content_img-title {
-  position: absolute;
-  top: 78%;
-  left: 0;
-  padding: 0 40px 40px 40px;
-  z-index: 2;
-}
-.Ingredients__content_img-title h3 {
-  margin-right: 15%;
-  font-family: Noe Display;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 100%;
-  letter-spacing: 0;
-  margin-bottom: 20px;
-}
-.Ingredients__content_img-title p {
-  font-family: Cera Pro;
-  font-weight: 500;
-  font-style: Medium;
-  font-size: 14px;
-  line-height: 120%;
-  letter-spacing: 0;
-  color: #7c7c7c;
-}
-</style>
+<?php $drink_img = $args['drink_image'] ?? null; ?>
+
 <section class="inset">
     <div class="inset__title">
         <img src="<?= get_template_directory_uri() ?>/img/j-title.webp" alt="image">
@@ -174,7 +32,11 @@
 
             <div class="inset__wrapper_sectionI">
                 <div class="inset__wrapper_sectionimg">
-                    <img src="<?= get_template_directory_uri() ?>/img/but.webp" alt="image">
+                    <?php if ($drink_img):?>
+                        <img src="<?= $drink_img['url'] ?>" alt="<?= $drink_img['alt'] ?>" loading="lazy">
+                    <?php else:?>
+                        <img src="<?= get_template_directory_uri() ?>/img/but.webp" alt="Kombucha bottle" loading="lazy">
+                    <?php endif;?>
                 </div>
             </div>
 

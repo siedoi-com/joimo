@@ -1,7 +1,7 @@
 <?php $left_col = get_field('left_column');
 $right_col = get_field('right_column'); ?>
 
-<div class="the-farm">
+<div class="the-farm clearfix">
 	<div class="container-fluid">
         <?php if( get_field('section_title_content') ): ?> 
     		<h2><?php the_field('section_title_content'); ?></h2>

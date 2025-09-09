@@ -3336,7 +3336,7 @@ div.quantity input[type=number]::-webkit-outer-spin-button {
 .the-farm{
   background: #EDEDEB;
   padding: 80px 0;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 .the-farm p{
   font-family: 'cera_proregular';																																																font-size: 18px;

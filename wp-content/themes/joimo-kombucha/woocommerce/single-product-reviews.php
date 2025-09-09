@@ -174,7 +174,7 @@ if ( ! comments_open() ) {
 </div>
 <?php if( is_singular() ) : ?>
     <script type="text/javascript">
-        var commentForm = document.getElementById('commentform');
-        commentForm.removeAttribute('novalidate');
+        const commentForm = document.getElementById('commentform');
+        if (commentForm) commentForm.removeAttribute('novalidate');
     </script>
 <?php endif; ?>

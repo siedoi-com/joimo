@@ -1,0 +1,103 @@
+.nt-nutrition-modal {
+    color: #fff;
+    background: #2A4934;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 4rem 3rem 4rem 4rem;
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    max-width: 38.7rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    height: 90svh;
+    transition: all .3s ease-in-out;
+
+    &__close {
+        display: flex;
+        align-items: center;
+        font-family: 'Cera Pro', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 120%;
+        padding: 0;
+        border: none;
+        color: rgba(255, 255, 255, 0.40);
+        gap: .5rem;
+        transition: all .3s ease-in-out;
+        box-shadow: none;
+        
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        &:hover, &:focus {
+            color: #fff;
+        }
+    }
+
+    &__content {
+        overflow-y: auto;
+        margin-block-start: 4rem;
+
+        &::-webkit-scrollbar {
+            width: 0.4rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.20);
+        }
+    }
+
+    &__title {
+        font-family: 'NoeDisplay-RegularV2';
+        margin-block-end: 1rem;
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+
+    &__ingredients {
+        margin-block-start: 5rem;
+
+        h4 {
+            margin-block: 0 1rem;
+        }
+
+        p {
+            margin-block: 0 0.5rem;
+            font-weight: 400;
+        }
+    }
+
+    &__tables {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-block-start: 6rem;
+        max-width: 82%;
+    }
+
+    &__table-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-block-end: 1rem;
+    }
+
+    &:not(.active) {
+        transform: translateX(100%);
+        pointer-events: none;
+    }
+}
+// End inner
+
+@include media-M {
+    .nt-nutrition-modal {
+        padding: 2rem;
+    }
+}
+// End M

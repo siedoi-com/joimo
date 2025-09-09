@@ -6,8 +6,11 @@
 
 // --- COMPONENTS ---
 @import "./components/btn.scss";
+@import "./components/section-heading.scss";
 @import "./components/faq.scss";
-
+@import "./components/product-badge.scss";
+@import "./components/big-product.scss";
+@import "./components/nutrition-modal.scss";
 // --- LAYOUT ---
 // @import "./layout/header.scss";
 // @import "./layout/footer.scss";
@@ -15,4 +18,10 @@
 // --- SECTIONS ---
 @import "./sections/full-bg-hero.scss";
 @import "./sections/product-kombucha.scss";
+@import "./sections/inset.scss";
+@import "./sections/ingredients.scss";
 @import "./sections/big-product-slider.scss";
+
+.the-farm.clearfix {
+    background: white;
+}

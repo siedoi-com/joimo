@@ -2,6 +2,7 @@
     $title = $args['title'] ?? null;
     $all_link = $args['all_link'] ?? null;
     $products_cat_id = $args['products'] ?? null;
+    $post_not_in = $args['post_not_in'] ?? null;
 
     // Get products
     $args = array(
@@ -15,6 +16,10 @@
             ),
         ),
     );
+
+    if ($post_not_in) {
+        $args['post__not_in'] = $post_not_in;
+    }
 
     $products_query = new WP_Query($args);
 ?>
