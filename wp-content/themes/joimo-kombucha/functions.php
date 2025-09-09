@@ -267,6 +267,7 @@ function joimo_kombucha_scripts()
 	wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/all.css', false, '5.14.0', 'all');
 	wp_enqueue_style('joimo-fonts', get_template_directory_uri() . '/css/joimo-fonts.css', false, '1.0', 'all');
 	wp_enqueue_style('dashicons');
+
 	if (is_front_page() || is_page_template('page-shop.php')) {
 		wp_enqueue_style( 'styles-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
 		wp_enqueue_script('script-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array('jquery'), _S_VERSION, true);
@@ -279,6 +280,13 @@ function joimo_kombucha_scripts()
         wp_enqueue_style( 'styles-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
 		wp_enqueue_script('script-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array('jquery'), _S_VERSION, true);
     }
+
+    if (is_page_template('page-shop.php')) {
+        wp_enqueue_script('gsap-core', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js', array(), null, true);
+        wp_enqueue_script('gsap-flip', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js', array('gsap-core'), null, true);
+        wp_enqueue_script('shop-page', get_template_directory_uri() . '/js/shop-page.js', array('gsap-core', 'gsap-flip'), _S_VERSION, true);
+    }
+
 
 	wp_enqueue_script('joimo-kombucha-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 	wp_enqueue_script('bootstrap-popper', get_template_directory_uri() . '/js/popper.min.js', array('jquery'), '1.16.1', true);

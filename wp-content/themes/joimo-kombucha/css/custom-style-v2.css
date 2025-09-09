@@ -820,6 +820,11 @@ margin-bottom: 80px;
 	margin-top: 35px;
 	position:relative;
 	margin-bottom: 180px;
+    max-width: 100%;
+}
+
+.newsletter .hero-column {
+    padding-inline: 0;
 }
 
 
