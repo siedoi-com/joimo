@@ -1,0 +1,16 @@
+.nt-shop-section {
+    padding-block: 8rem;
+    border-top: .1rem solid #EDEDEB;
+
+    &__hading {
+        text-align: center;
+    }
+
+    &__products-wr {
+        margin-block-start: 8rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.2rem;
+    }
+}
+// End inner

@@ -16,7 +16,8 @@
 
     <div class="nt-big-product__content-wr">
         <h4 class="nt-big-product__title"><?= get_the_title($product_id) ?></h4>
-        <div class="nt-big-product__desc"><?= the_excerpt($product_id); ?></div>
+        <!-- <div class="nt-big-product__desc">< the_excerpt($product_id); ?></div> -->
+        <div class="nt-big-product__desc"><?= get_field('custom_product_text'); ?></div>
         <div class="nt-big-product__price price price--size_def price--type_regular">$<?= $product->get_price($product_id) ?></div>
     </div>
     <!-- /.nt-big-product__content-wr -->

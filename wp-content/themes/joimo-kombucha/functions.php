@@ -267,9 +267,10 @@ function joimo_kombucha_scripts()
 	wp_enqueue_style('fontawesome', get_template_directory_uri() . '/css/all.css', false, '5.14.0', 'all');
 	wp_enqueue_style('joimo-fonts', get_template_directory_uri() . '/css/joimo-fonts.css', false, '1.0', 'all');
 	wp_enqueue_style('dashicons');
-	if (is_front_page()) {
+	if (is_front_page() || is_page_template('page-shop.php')) {
 		wp_enqueue_style( 'styles-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css', array());
 		wp_enqueue_script('script-splide', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', array('jquery'), _S_VERSION, true);
+		wp_enqueue_style( 'custom-style-v2', get_template_directory_uri() . '/css/custom-style-v2.css', 9.0);
 		wp_enqueue_style( 'styles-home-combucha', get_template_directory_uri() . '/css/home-styles-combucha.css', array());
 	}
 
