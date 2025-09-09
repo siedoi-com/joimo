@@ -1,0 +1,47 @@
+.nt-link {
+    cursor: pointer;
+    transition: var(--transition);
+}
+// End inner
+
+.nt-link--type {
+    &_def {
+        display: inline-block;
+        position: relative;
+        line-height: 1;
+
+        &::after {
+            @include pseudo;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -.1rem;
+            width: 100%;
+            height: 0.1rem;
+            transition: var(--transition);
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: var(--color_leaf);
+
+            &::after {
+                width: 50%;
+                background: var(--color_leaf);
+            }
+        }
+    }
+    // End DEF
+}
+// End TYPE
+
+.nt-link--theme {
+    &_dark {
+        color: var(--color_ink);
+
+        &::after {
+            background: var(--color_ink);
+        }
+    }
+    // End DARK
+}
+// End by THEME

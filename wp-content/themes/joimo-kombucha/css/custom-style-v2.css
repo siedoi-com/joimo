@@ -2409,9 +2409,9 @@ input#pwgc-redeem-button{
         width: initial!important;
         padding: 13px 30px;         
     }
-    .hero-3-column-image-section .row.desktop-split-image-section .desktop_img_block{
+    /* .hero-3-column-image-section .row.desktop-split-image-section .desktop_img_block{
         display: none;
-    }        
+    }         */
     .hero-3-column-image-section .row.desktop-split-image-section .mobile_img_block{
         display: block;
     }    

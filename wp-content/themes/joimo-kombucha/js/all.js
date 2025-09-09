@@ -4457,7 +4457,39 @@ document.addEventListener( 'DOMContentLoaded', function() {
         perPage: 3,
         pagination: false,
         arrows: false,
+        gap: '4.6rem',
+        breakpoints: {
+          960: {
+              perPage: 2,
+              gap: '2.4rem',
+          },
+          640: {
+            perPage: 1,
+          }
+        }
       });
+
+      // Custom buttons
+      const prevButton = productSlider.querySelector('.nt-big-product-slider__arrow--prev');
+      const nextButton = productSlider.querySelector('.nt-big-product-slider__arrow--next');
+
+      // Update button state (disabled or not)
+      const updateButtonsState = () => {
+          const { index, length } = sliderProduct;
+          const perPage = sliderProduct.options.perPage || 1;
+
+          prevButton.disabled = index === 0;
+          nextButton.disabled = index >= length - perPage;
+      };
+
+      sliderProduct.on('mounted', updateButtonsState);
+      sliderProduct.on('moved', updateButtonsState);
+      sliderProduct.on('resized', updateButtonsState);
+
+      // Prev/Next button listeners
+      prevButton.addEventListener('click', () => sliderProduct.go('<'));
+      nextButton.addEventListener('click', () => sliderProduct.go('>'));
+
       sliderProduct.mount();
     });
   }
