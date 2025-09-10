@@ -1,5 +1,78 @@
-<?php $drink_img = $args['drink_image'] ?? null; ?>
+<?php $drink_img = $args['drink_image'] ?? null;
+$custom_section = $args['custom_section'] ?? null; ?>
 
+<?php if ($custom_section):?>
+    <section class="inset">
+        <?php if ($custom_section['heading']):?>
+            <div class="inset__title">
+                <img src="<?= get_template_directory_uri() ?>/img/j-title.webp" alt="image">
+                <?php if ($custom_section['heading']['title']):?>
+                    <h3><?= $custom_section['heading']['title'] ?></h3>
+                <?php endif;?>
+                <?php if ($custom_section['heading']['subtitle']):?>
+                    <p><?= $custom_section['heading']['subtitle'] ?></p>
+                <?php endif;?>
+            </div>
+        <?php endif;?>
+        <?php $advs = $custom_section['advantages']; 
+        $advs = $custom_section['advantages'];
+        $total_items = count($advs);
+        $chunk_size = ceil($total_items / 2);
+        $parts = array_chunk($advs, $chunk_size);
+        $first_half = $parts[0] ?? [];
+        $second_half = $parts[1] ?? [];?>
+        <div class="container">
+            <div class="inset__wrapper">
+                <div class="inset__wrapper_section">
+                    <?php foreach($first_half as $half):?>
+                    <div class="inset__section">
+                        <?php if ($half['image']):?>
+                            <img src="<?= $half['image']['url'] ?>" alt="<?= $half['image']['alt'] ?>" loading="lazy">
+                        <?php endif;?>
+
+                        <?php if ($half['title']):?>
+                            <h4><?= $half['title'] ?></h4>
+                        <?php endif;?>
+
+                        <?php if ($half['description']):?>
+                            <p><?= $half['description'] ?></p>
+                        <?php endif;?>
+                    </div>
+                    <?php endforeach;?>
+                </div>
+
+                <div class="inset__wrapper_sectionI">
+                    <div class="inset__wrapper_sectionimg">
+                        <?php if ($custom_section['image']):?>
+                            <img src="<?= $custom_section['image']['url'] ?>" alt="<?= $custom_section['image']['alt'] ?>" loading="lazy">
+                        <?php else:?>
+                            <img src="<?= get_template_directory_uri() ?>/img/but.webp" alt="Kombucha bottle" loading="lazy">
+                        <?php endif;?>
+                    </div>
+                </div>
+
+                <div class="inset__wrapper_section">
+                    <?php foreach($second_half as $half):?>
+                    <div class="inset__section">
+                        <?php if ($half['image']):?>
+                            <img src="<?= $half['image']['url'] ?>" alt="<?= $half['image']['alt'] ?>" loading="lazy">
+                        <?php endif;?>
+
+                        <?php if ($half['title']):?>
+                            <h4><?= $half['title'] ?></h4>
+                        <?php endif;?>
+
+                        <?php if ($half['description']):?>
+                            <p><?= $half['description'] ?></p>
+                        <?php endif;?>
+                    </div>
+                    <?php endforeach;?>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<?php else:?>
 <section class="inset">
     <div class="inset__title">
         <img src="<?= get_template_directory_uri() ?>/img/j-title.webp" alt="image">
@@ -65,3 +138,4 @@
         </div>
     </div>
 </section>
+<?php endif;?>

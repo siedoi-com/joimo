@@ -1,0 +1,57 @@
+.nt-quantity-selector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10rem;
+    // width: 12.8rem;
+    background-color: #EDEDEB;
+    padding: .4rem;
+    min-height: 6rem;
+
+    &__btn {
+        width: 3.2rem;
+        height: 3.2rem;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #7C7C7C;
+        background-color: transparent;
+        border: none;
+        border-radius: inherit;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-size: 1.8rem;
+        font-weight: 500;
+
+        &:hover {
+            background-color: #e5e7eb;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+    #amount {
+        font-weight: 500;
+        font-size: 1.7rem;
+        color: #221E1F;
+        text-transform: uppercase;
+    }
+
+}
+// End inenr
+
+@media screen and (max-width: 700px) {
+    .nt-quantity-selector {
+        border-radius: 0;
+        gap: 1rem;
+
+        &__btn {
+            border-radius: 1rem;
+            flex-grow: 1;
+        }
+    }
+}

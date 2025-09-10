@@ -7,7 +7,7 @@ $nut_fatcs = $args['nutrition_facts'] ?? null;
     <div class="ingredients__heading">
         <?php if ($section_title):?>
             <div class="Ingredients__title">
-                <h2>Ingredients.</h2>
+                <h2><?= $section_title ?></h2>
             </div>
         <?php endif;?>
         <?php if ($nut_fatcs):?>

@@ -1,0 +1,201 @@
+.nt-kombucha-variations {
+    .product-template-default.woocommerce div.product &.cart.variations_form {
+        width: 100%;
+        max-width: 100% !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        &::before, &::after {
+            display: none;
+        }
+    }
+
+    --brand-color: #2A4934;
+    --brand-color-light: #a7f3d0;
+    --brand-color-hover: #064e3b;
+    --text-dark: #1f2937;
+    --text-light: #4b5563;
+    --bg-light: #f3f4f6;
+    --border-color: #d1d5db;
+    
+    // &__group {
+    //     margin-block-end: 2.4rem;
+    //     &:last-child {
+    //         margin-block-end: 0;
+    //     }
+    // }
+
+    &__group {
+        &--quantity {
+            order: 3;
+            flex-basis: 100%;
+        }
+    }
+
+    &__label {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #7C7C7C;
+        margin-block-end: 0.5rem;
+    }
+
+    &__package-selector {
+        margin-block-start: 1.2rem;
+    }
+
+    &__package-option {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 3rem 2rem 1.5rem;
+        border: .1rem solid transparent;
+        border-radius: 1rem;
+        cursor: pointer;
+        background: #EDEDEB;
+        transition: all 0.2s ease-in-out;
+        margin-block-start: .5rem;
+
+        &:first-child {
+            margin-block-start: 0;
+        }
+
+        &.selected, &:hover, &:focus {
+            border-color: #2A4934;
+        }
+
+        .title {
+            margin-inline-start: 1.4rem;
+            font-weight: 500;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: #221E1F;
+        }
+
+        .save-badge {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: none;
+            color: #7C7C7C;
+        }
+    }
+
+    &__package-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.2rem;
+    }
+
+    &__action-buttons {
+        display: flex;
+        gap: 3rem;
+        // margin-block-start: 3rem;
+        flex-basis: 100%;
+        order: 4;
+    }
+
+    &__store-btn {
+        border: .1rem solid #000;
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        font-weight: 500;
+        font-size: 1.7rem;
+        color: #2A4934;
+        box-shadow: none;
+        justify-content: center;
+
+        &:hover {
+            background-color: #f3f4f6;
+        }
+
+        svg {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    &__btn {
+        flex-grow: 1;
+    }
+
+    &__add-to-cart {
+        padding: 2rem 4rem;
+        font-size: 1.7rem;
+    } 
+
+    &__price {
+        text-align: end;
+        color: #221E1F;
+        font-size: 1.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        .price-original {
+            text-decoration: line-through;
+        }
+
+        .price-current {
+            color: #2A4934;
+        }
+    }
+}
+// End inner
+
+
+@media screen and (max-width: 700px) {
+    .nt-kombucha-variations {
+        &__label {
+            display: none;
+        }
+
+        &__package-option {
+            border-radius: 0;
+            padding: 1.2rem 2rem;
+            margin: 0;
+
+            .title, .save-badge {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__group {
+            &--changer {
+                border-block-start: .1rem solid #2A4934;
+            }
+        }
+
+        &__package-selector {
+            margin-block-start: 0;
+        }
+
+        &__action-buttons {
+            gap: 0;
+
+        }
+
+        &__store-btn {
+            border-radius: 0;
+            font-size: 1.4rem;
+            padding: 1.2rem;
+
+            svg {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+
+        &__price {
+            font-size: 1.4rem;
+        }
+
+        .single-product &.cart &__add-to-cart, .single-product &.variations_form  &__add-to-cart.single_add_to_cart_button {
+            border-radius: 0;
+            font-size: 1.4rem;
+            padding: 1.2rem !important;
+        }
+    }
+}

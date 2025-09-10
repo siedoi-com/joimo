@@ -1,0 +1,38 @@
+.nt-variations {
+    display: flex;
+    align-items: center;
+    background-color: #EDEDEB;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #7C7C7C;
+
+    &__size-option {
+        flex: 1;
+        padding: 2rem 4rem;
+        border-radius: inherit;
+        text-align: center;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        color: #7C7C7C;
+        border: none;
+        background-color: #EDEDEB;
+
+        &.active {
+            background-color: #2A4934;
+            color: white;
+            font-weight: 500;
+        }
+    }
+}
+// End inner
+
+@media screen and (max-width: 700px) {
+    .nt-variations {
+        border-radius: 0;
+
+        &__size-option {
+            padding: 1.2rem 2rem;
+        }
+    }
+}

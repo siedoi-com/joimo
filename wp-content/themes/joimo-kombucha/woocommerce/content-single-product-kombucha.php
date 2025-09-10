@@ -118,8 +118,126 @@ if ( $main_image_id ) {
         </div>
 
         <div class="product-kombucha__add-to-cart">
-            <?php woocommerce_template_single_add_to_cart(); ?>
+
+            <form action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" class="variations_form cart nt-kombucha-variations" method="POST" enctype='multipart/form-data'  data-product_id="<?php echo absint( $product->get_id() ); ?>" data-product_variations="<?php echo htmlspecialchars( wp_json_encode( $product->get_available_variations() ) ); ?>">
+
+
+                <?php 
+                    $attributes = $product->get_attributes();
+
+                    foreach ( $attributes as $name => $attribute ) :
+                        $label = wc_attribute_label( $name );
+
+                        if ( $attribute->is_taxonomy() ) {
+                            $terms = wc_get_product_terms( $product->get_id(), $name, array( 'fields' => 'all' ) );
+                        } else {
+                            // Fallback for non-taxonomy attributes, though the code below expects terms.
+                            $values = explode( ' | ', $attribute->get_options() );
+                            $terms  = array(); // Create an empty array to avoid errors.
+                            foreach ( $values as $value ) {
+                                $term          = new stdClass();
+                                $term->name    = $value;
+                                $term->slug    = sanitize_title( $value );
+                                $term->term_id = 0; // Not a real term.
+                                $terms[]       = $term;
+                            }
+                        }
+
+                        if ( empty( $terms ) ) {
+                            continue; // Skip if there are no terms for this attribute.
+                        }
+
+                        if ( 'Size' === $label ) :
+                    ?>
+                            <div class="nt-kombucha-variations__group">
+                                <label class="nt-kombucha-variations__label">Choose <?= esc_html( $label ) ?></label>
+                                <div id="size-selector" class="nt-kombucha-variations__size-selector nt-variations">
+                                    <?php foreach ( $terms as $term_item ) : ?>
+                                        <button data-size="<?= esc_attr( $term_item->slug ) ?>" class="nt-variations__size-option" data-attribute-name="<?= esc_attr( $term_item->taxonomy ) ?>" data-attribute-id="<?= esc_attr( $term_item->term_id ) ?>" type="button"><?= esc_html( $term_item->name ) ?></button>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        <?php elseif ( 'Quantity' === $label ) : ?>
+                            <div class="nt-kombucha-variations__group nt-kombucha-variations__group--quantity">
+                                <label class="nt-kombucha-variations__label">Choose quantity</label>
+                                <div id="package-selector" class="nt-kombucha-variations__package-selector">
+                                    <?php foreach ( $terms as $index => $term_item ) : ?>
+                                        <?php
+      
+                                        $price          = 0;
+                                        $original_price = 0;
+                                        $price_text     = '';
+                                        $save_badge     = '';
+
+            
+                                        if ( 'single-bottles' === $term_item->slug ) { 
+                                            $price      = 35;
+                                            $price_text = '$' . $price . ' / EACH';
+                                        } elseif ( 'pack-of-12-bottles' === $term_item->slug ) {
+                                            $price          = 336;
+                                            $original_price = 420;
+                                            $save_badge     = 'Save 20%';
+                                        }
+                                        ?>
+                                        <label data-package="<?= esc_attr( $term_item->slug ) ?>" data-price="<?= esc_attr( $price ) ?>" class="nt-kombucha-variations__package-option" data-attribute-name="<?= esc_attr( $term_item->taxonomy ) ?>" data-attribute-id="<?= esc_attr( $term_item->term_id ) ?>">
+                                            <div class="nt-kombucha-variations__package-details">
+                                                <input type="radio" name="package" class="custom-radio" <?= ( 0 === $index ) ? 'checked' : '' ?>>
+                                                <div class="title">
+                                                    <p><?= esc_html( strtoupper( $term_item->name ) ) ?></p>
+                                                    <?php if ( ! empty( $save_badge ) ) : ?>
+                                                        <p class="save-badge"><?= esc_html( $save_badge ) ?></p>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+                                            
+                                            <?php if ( $original_price > 0 ) : ?>
+                                                <div class="nt-kombucha-variations__price">
+                                                    <span class="price-original">$<?= esc_html( $original_price ) ?></span>
+                                                     → 
+                                                    <span class="price-current">$<?= esc_html( $price ) ?></span>                                                  
+                                                </div>
+                                            <?php else : ?>
+                                                <span class="nt-kombucha-variations__price"><?= esc_html( $price_text ) ?></span>
+                                            <?php endif; ?>
+                                        </label>
+                                    <?php endforeach; ?>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                
+
+                <div class="nt-kombucha-variations__group nt-kombucha-variations__group--changer">
+                    <label class="nt-kombucha-variations__label">Choose an amount</label>
+                    <div class="amount-selector nt-quantity-selector nt-kombucha-variations__quantity">
+                        <button id="decrease-amount" class="nt-quantity-selector__btn" type="button">-</button>
+                        <span id="amount">1</span>
+                        <input type="hidden" name="quantity" value="1" >
+                        <button id="increase-amount" class="nt-quantity-selector__btn " type="button">+</button>
+                    </div>
+                </div>
+
+
+                <div class="nt-kombucha-variations__action-buttons">
+                    <button class="btn  btn--border btn--border_green nt-kombucha-variations__store-btn nt-kombucha-variations__btn" type="button">
+                        <span>FIND A STORE</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8159 20.6077C16.8509 18.5502 20 15.1429 20 11C20 6.58172 16.4183 3 12 3C7.58172 3 4 6.58172 4 11C4 15.1429 7.14909 18.5502 11.1841 20.6077C11.6968 20.8691 12.3032 20.8691 12.8159 20.6077Z" stroke="#2A4934" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 11C15 12.6569 13.6569 14 12 14C10.3431 14 9 12.6569 9 11C9 9.34315 10.3431 8 12 8C13.6569 8 15 9.34315 15 11Z" stroke="#2A4934" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
+                    </button>
+
+                    <button id="add-to-cart-btn" class="btn btn--theme_leaf nt-kombucha-variations__add-to-cart nt-kombucha-variations__btn single_add_to_cart_button" type="submit">
+                        <span class="nt-kombucha-variations__price-chosen">$35</span> | ADD TO CART
+                    </button>
+                    	<input type="hidden" name="add-to-cart" value="<?php echo absint( $product->get_id() ); ?>" />
+                    	<input type="hidden" name="product_id" value="<?php echo absint( $product->get_id() ); ?>" />
+                    	<input type="hidden" name="variation_id" class="variation_id" value="0" />
+                </div>
+            </form>
         </div>
+
 
         <?php if (get_field('accordions')):?>
             <div class="product-kombucha__acc">

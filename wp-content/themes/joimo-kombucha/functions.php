@@ -294,7 +294,7 @@ function joimo_kombucha_scripts()
 	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.5.2', true);
 	wp_enqueue_script('fontawesome-js', get_template_directory_uri() . '/js/all.js', array('jquery'), '5.14.0', true);
 	wp_enqueue_script('header-color', get_template_directory_uri() . '/js/header-fixed-color.js', array('jquery'), '1.0', true);
-
+    wp_enqueue_script('mega-menu', get_template_directory_uri() . '/js/mega-menu.js', array(), _S_VERSION, true);
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
